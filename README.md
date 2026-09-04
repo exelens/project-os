@@ -45,6 +45,14 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 
 ---
 
+## Prism — авторское know-how
+
+**Prism** (слои 01–08, merge/`B-*`, waves, verify, isolation) — **собственная наработка** автора kit ([Aleksej Lazutin / @exelens](https://github.com/exelens)), не заимствование чужого audit-фреймворка. Подробнее и формулировка для цитирования: [`scaffold/prism/README.md`](./scaffold/prism/README.md).
+
+Код и тексты kit распространяются под [MIT](./LICENSE); авторство методологии Prism при использовании/адаптации сохраняй.
+
+---
+
 ## Чего нет (намеренно)
 
 Обязательный стек, код исходного продукта, секреты, готовый CI под чужой Makefile.

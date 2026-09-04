@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 — 2026-09-04
+
+- Explicit attribution: Prism is original author know-how (@exelens)
+
 ## 1.0.0 — 2026-09-04
 
 First standalone release of **Project OS** kit.
