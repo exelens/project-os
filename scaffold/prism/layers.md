@@ -15,7 +15,7 @@ Product domains: свои номера и префиксы ID. Optional: IDOR / 
 | billing / limits / entitlements | деньги и квоты |
 | migrations | схема prod |
 | queue / workers / jobs | lost work / double run |
-| публичный HTML / SEO inject | боты и шаринг |
+| публичный HTML / meta · OG · crawl inject | боты и шаринг |
 
 Обычный поток без второго прохода: docs, copy, тесты без смены семантики, chrome UI.
 

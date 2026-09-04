@@ -10,14 +10,12 @@
 В корне kit **нет** продуктового `AGENTS.md` — он лежит в [`scaffold/AGENTS.md`](./scaffold/AGENTS.md) и копируется в продукт скриптом. Этот `README.md` — про kit, не про продукт.
 
 ```bash
-git clone https://github.com/TODO_GITHUB_USER/project-os.git
+git clone https://github.com/exelens/project-os.git
 cd project-os
 chmod +x scripts/apply_to_repo.sh
 ./scripts/apply_to_repo.sh /path/to/your-product-repo
 cd /path/to/your-product-repo && rg 'TODO_' -n
 ```
-
-После публикации замени `TODO_GITHUB_USER` на свой GitHub login (или поправь URL clone).
 
 ---
 

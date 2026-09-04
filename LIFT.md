@@ -27,8 +27,6 @@ Private:
 gh repo create project-os --private --source=. --remote=origin --push
 ```
 
-После push поправь clone-URL в [README.md](./README.md) (`TODO_GITHUB_USER`).
-
 В продуктовый репо потом:
 
 ```bash
