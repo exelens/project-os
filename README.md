@@ -4,6 +4,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
+**Для любого продукта и любого агента.** Один и тот же kit кладётся в репо на любом стеке; агент читает файлы (`AGENTS.md`, `docs/`, `prism/`), а не «плагин IDE». Работает с **Cursor**, **Crush**, **Claude Code** (и другими CLI/IDE-агентами) — без привязки к одному инструменту. Опциональный `.cursor/rules/` — удобство для Cursor, не зависимость.
+
 **Готово к работе:** папка [`scaffold/`](./scaffold/) + скрипт apply.  
 **Старт:** **[QUICKSTART.md](./QUICKSTART.md)**.
 
