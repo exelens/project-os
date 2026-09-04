@@ -1,0 +1,17 @@
+---
+description: Project OS — canon, tests, Prism, antipatterns
+alwaysApply: true
+---
+
+Follow AGENTS.md and docs/canon-owners.md.
+
+- One SSOT per concept; no duplicate limits/labels without parity test.
+- Never return raw exception strings to clients.
+- No assert True / empty tests; prefer contract tests.
+- Risk zones need an explicit invariant (see prism/layers.md).
+- Prism audit/merge/verify: do not change code; do not wipe reviews/.
+- Do not invent product claims; honesty docs win.
+- Post-code loop: after task → tests → docs → tests (single chat).
+- Vibe-check (optional): after task, ask about hidden risks and suggestions.
+- Never commit / push / force / init / add / clean without explicit user request.
+- Never modify git config. Never commit secrets (.env, tokens, prod dumps).

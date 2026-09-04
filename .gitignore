@@ -1,0 +1,23 @@
+# Local agent / editor state
+.crush/
+.cursor/
+.codegraph/
+graphify-out/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Secrets / env
+.env
+.env.*
+!.env.example
+
+# Smoke / local apply targets
+_apply_smoke/
+**/__pycache__/
+*.pyc
+.venv/
+node_modules/
