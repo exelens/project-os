@@ -9,6 +9,7 @@
 
 Изоляция:
 - Только `reviews/06-public-html-render.md`.
+- No-findings — без пустого заполнения: «no findings» + причина; не заполнять разделы строками ради строки (см. [layers.md](./layers.md)).
 
 Структура MD:
 1. Verdict — бот видит правду?

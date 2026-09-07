@@ -1,0 +1,19 @@
+# Project OS — общий .gitignore (дополни product-специфичным)
+# Env / секреты
+.env
+.env.*
+!.env.example
+
+# Зависимости / сборка
+node_modules/
+dist/
+build/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Логи / кэш / OS
+*.log
+.cache/
+.DS_Store

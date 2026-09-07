@@ -106,6 +106,10 @@ else
   echo "skip (exists): README.md (product kept)"
 fi
 
+if [[ ! -d "$TARGET/.git" ]]; then
+  echo "warn: $TARGET is not a git repo — run 'git init' (AGENTS.md assumes VCS)." >&2
+fi
+
 echo
 echo "Done → $TARGET"
 echo "Next: open QUICKSTART.md and fill TODO_ markers (rg 'TODO_' -n)."

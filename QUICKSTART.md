@@ -37,7 +37,7 @@ rg 'TODO_' -n
 | `tests/README.md` | как запускать тесты |
 | `README.md` | как поднять локально |
 
-Cursor: если нет `.cursor/rules/project-os.mdc` → из `cursor-rules/project-os.mdc`.  
+Cursor: `scripts/apply_to_repo.sh` сам ставит `.cursor/rules/project-os.mdc` (и portable-копию в `cursor-rules/`); при ручном переносе — из `cursor-rules/project-os.mdc`.  
 День 0: `docs/checklists/new-repo.md`.
 
 ## 3. Smoke для агента

@@ -11,6 +11,7 @@
 
 Изоляция:
 - Только `reviews/02-api-contract-freeze.md`.
+- No-findings — без пустого заполнения: «no findings» + причина; не заполнять разделы строками ради строки (см. [layers.md](./layers.md)).
 - Код не меняй.
 
 Структура MD:

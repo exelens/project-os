@@ -4,8 +4,8 @@
 
 - [ ] Имя папки = ожидаемое имя пакета/импортов (если важно)
 - [ ] Private remote · ветка `main`
-- [ ] `.gitignore` (env, caches, build, secrets)
-- [ ] `.env.example` без секретов
+- [ ] Kit `.gitignore` + `.env.example` из `scaffold/` применены (или свои) — секреты не в git
+- [ ] Реальный `.env` не коммитить; значения читать из окружения
 
 ## 1. Project OS
 
