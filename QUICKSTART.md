@@ -34,6 +34,8 @@ rg 'TODO_' -n
 | `AGENTS.md` | имя, стек, путь юзера, команды тестов |
 | `docs/stages.md` | честный этап (Spike / …) |
 | `docs/canon-owners.md` | 2–3 реальных понятия |
+| `docs/voice.md` | тон UI (если витрина/кабинет; иначе «voice — later» в stages) |
+| `.env.example` | имена переменных без секретов |
 | `tests/README.md` | как запускать тесты |
 | `README.md` | как поднять локально |
 
@@ -51,6 +53,7 @@ Cursor: `scripts/apply_to_repo.sh` сам ставит `.cursor/rules/project-os
 | Нужно | Куда |
 |-------|------|
 | Prism | `prism/README.md` |
-| Новый домен продукта | `prism/DOMAIN.md` |
+| Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |
+| Тон / словарь UI | `docs/voice.md` |
 | Осознанный долг | `docs/accepted-debt.md` |
 | Вынести kit в отдельный git | [LIFT.md](./LIFT.md) |

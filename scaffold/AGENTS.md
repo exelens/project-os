@@ -29,6 +29,7 @@
 | Этапы / долг | [docs/stages.md](docs/stages.md) · [docs/accepted-debt.md](docs/accepted-debt.md) |
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
+| Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
 | Деплой / ops | `docs/deployment.md` — создать, когда появится деплой |
 | Агент в существующем репо | [docs/checklists/agent-workflow.md](docs/checklists/agent-workflow.md) |
 
@@ -37,7 +38,8 @@
 ## КАНОН-OWNERS (кратко)
 
 Числа, лейблы, лимиты, error strings — **только** через таблицу в [docs/canon-owners.md](docs/canon-owners.md).  
-Не дублировать константы «для удобства». FE≡BE — parity-тест, не копипаста без гейта.
+Не дублировать константы «для удобства». FE≡BE — parity-тест, не копипаста без гейта.  
+Тон и словарь пользовательского UI — [docs/voice.md](docs/voice.md) (не второй vision в чате).
 
 ---
 
@@ -63,6 +65,7 @@
 - ❌ Писать в общую БД/очередь/кэш в тестах без изоляции
 - ❌ Менять код на этапе Prism audit / merge / verify
 - ❌ Wipe `reviews/` агентом после close цикла
+- ❌ Claim / copy без `docs/voice.md` (если UI есть) и без evidence
 
 См. [agent-rules/antipatterns.md](agent-rules/antipatterns.md).
 

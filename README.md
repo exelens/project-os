@@ -26,7 +26,7 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 | Путь | Назначение |
 |------|------------|
 | [QUICKSTART.md](./QUICKSTART.md) | Apply → TODO_ → smoke |
-| [scaffold/](./scaffold/) | Готовые файлы продукта (AGENTS, docs, prism, tests, cursor rule) |
+| [scaffold/](./scaffold/) | Готовые файлы продукта (AGENTS, docs, `voice.md`, prism, tests, `.gitignore` / `.env.example`, cursor rule) |
 | [scripts/apply_to_repo.sh](./scripts/apply_to_repo.sh) | Разложить scaffold в репо (не затирает README продукта) |
 | [CHANGELOG.md](./CHANGELOG.md) | Версии kit |
 | [LIFT.md](./LIFT.md) | Как публиковать / версионировать kit |
@@ -39,9 +39,9 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 ## Принципы
 
 1. Канон в коде + коротких docs, не в чате.  
-2. Один SSOT на понятие (`docs/canon-owners.md`).  
+2. Один SSOT на понятие (`docs/canon-owners.md`); тон UI — `docs/voice.md` (если есть витрина).  
 3. Тесты = контракт поведения; нет `assert True`.  
-4. Prism: audit → merge → волны → verify с evidence.  
+4. Prism: audit → merge → волны → verify с evidence; новый domain-слой — только ничейная зона (`prism/DOMAIN.md`).  
 5. ACCEPTED — в `docs/accepted-debt.md`.  
 6. Агент не wipe’ает `reviews/`.
 

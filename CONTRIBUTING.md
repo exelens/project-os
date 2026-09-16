@@ -12,6 +12,8 @@ Issues and PRs welcome for the **kit** (scaffold, apply script, Prism prompts, d
 rm -rf /tmp/project-os-smoke
 ./scripts/apply_to_repo.sh /tmp/project-os-smoke
 test -f /tmp/project-os-smoke/AGENTS.md
+test -f /tmp/project-os-smoke/docs/voice.md
+test -f /tmp/project-os-smoke/.env.example
 ./scripts/apply_to_repo.sh "$PWD" && echo "FAIL: should refuse kit-self" || true
 ```
 

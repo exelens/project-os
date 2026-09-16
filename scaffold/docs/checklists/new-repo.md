@@ -24,6 +24,7 @@
 
 - [ ] 2–3 строки в canon-owners (даже TBD owner)
 - [ ] Этап в stages.md честный (Spike ≠ Open Beta)
+- [ ] UI/витрина есть → заполни `docs/voice.md` (аудитории · словарь · зоны); иначе «voice — later» в stages
 
 ## DoD
 
