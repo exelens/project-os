@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- `scaffold/prism/pisdetscheck.md` — **стой**: межцикловый READ-ONLY triage (не слой Prism; не в 07); wired in prism README · layers · DOMAIN · AGENTS · docs hub · agent-workflow · antipatterns
+
 ## 1.1.0 — 2026-09-16
 
 - `scaffold/docs/voice.md` — domain-agnostic tone-of-voice template (`TODO_`); wired into docs hub, canon-owners, AGENTS, conventions/antipatterns, Prism 05, checklists, Cursor rule

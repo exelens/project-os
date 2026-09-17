@@ -29,6 +29,7 @@
 - ❌ Писать код на слое audit / merge / verify
 - ❌ Мешать `B-*` и domain/optional ID в одном backlog
 - ❌ Новый domain-слой без ничейной зоны (дубль 03/04/«механизмы») — см. `prism/DOMAIN.md`
+- ❌ Делать из межциклового triage слой Prism (`pisdetscheck` / `pi.md` → не `0N`, не `reviews/`)
 - ❌ Объявить цикл green при незапущенном слое как будто он пройден
 - ❌ Агент удаляет `reviews/` после close
 - ❌ ACCEPTED без причины и критерия пересмотра

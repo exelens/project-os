@@ -10,6 +10,7 @@ Follow AGENTS.md and docs/canon-owners.md.
 - No assert True / empty tests; prefer contract tests.
 - Risk zones need an explicit invariant (see prism/layers.md).
 - Prism audit/merge/verify: do not change code; do not wipe reviews/.
+- Inter-cycle triage: prism/pisdetscheck.md (стой) — not a Prism layer; do not merge into B-*.
 - Do not invent product claims; honesty docs win.
 - UI tone/copy: follow docs/voice.md when present; no shell/env in user-facing UI.
 - Post-code loop: after task → tests → docs → tests (single chat).

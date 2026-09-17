@@ -11,6 +11,7 @@
 | [accepted-debt.md](accepted-debt.md) | Осознанный долг (ACCEPTED), не баги ядра |
 | [prism-cycle-summary.md](prism-cycle-summary.md) | Сводка последнего закрытого Prism-цикла |
 | [../prism/README.md](../prism/README.md) | Ритуал Prism |
+| [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой: межцикловый triage (не слой) |
 | [checklists/agent-workflow.md](checklists/agent-workflow.md) | Агент в существующем репо |
 
 Добавляй строки по мере появления: database · deployment · monitoring · security · product domains.

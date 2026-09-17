@@ -42,8 +42,9 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 2. Один SSOT на понятие (`docs/canon-owners.md`); тон UI — `docs/voice.md` (если есть витрина).  
 3. Тесты = контракт поведения; нет `assert True`.  
 4. Prism: audit → merge → волны → verify с evidence; новый domain-слой — только ничейная зона (`prism/DOMAIN.md`).  
-5. ACCEPTED — в `docs/accepted-debt.md`.  
-6. Агент не wipe’ает `reviews/`.
+5. Между циклами — **стой** [`prism/pisdetscheck.md`](./scaffold/prism/pisdetscheck.md) (не слой; scratch в корне продукта).  
+6. ACCEPTED — в `docs/accepted-debt.md`.  
+7. Агент не wipe’ает `reviews/`.
 
 ---
 

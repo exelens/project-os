@@ -28,6 +28,7 @@
 | Тесты | [tests/README.md](tests/README.md) |
 | Этапы / долг | [docs/stages.md](docs/stages.md) · [docs/accepted-debt.md](docs/accepted-debt.md) |
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
+| Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
 | Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
 | Деплой / ops | `docs/deployment.md` — создать, когда появится деплой |

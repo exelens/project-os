@@ -11,6 +11,7 @@
 | **Этот README** | Цикл и карта слоёв |
 | [layers.md](./layers.md) | Изоляция, параллель, merge, verify, anti-overlap |
 | `prompts/0N-*.md` | Роль слоя — в чат как `@prism/prompts/0N-…` |
+| [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (не слой; не в 07) |
 | [../docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md) | Сводка последнего цикла |
 | [../docs/accepted-debt.md](../docs/accepted-debt.md) | ACCEPTED residual |
 | `../reviews/` | Scratch цикла; wipe — только владелец |
@@ -47,6 +48,11 @@
 
 Новый домен: [DOMAIN.md](./DOMAIN.md) — **только ничейная зона**; не дублировать 03/04 «слоем механизмов».
 
+### Стой (не слой)
+
+Между закрытыми циклами Prism, перед короткой FIX-волной: [pisdetscheck.md](./pisdetscheck.md).  
+Пишет scratch в корне продукта (`pisdetscheck.md` или `pi.md`). **Не** номер слоя, **не** `reviews/0N`, **не** merge в `B-*`. Не заменяет 01–08 и не идёт после «только что закрытого» цикла ради третьей сети. Generic «senior audit + улучши промпт» в kit **не** входит.
+
 ---
 
 ## Как запускать
@@ -57,3 +63,4 @@
 4. Wave fixes → **08** со scope = Wave K.
 5. Domains/optional — свои ID; verify в том же чате.
 6. Close по формуле в `layers.md`; агент не удаляет `reviews/`.
+7. Между циклами (по боли) — стой `@prism/pisdetscheck.md` → отдельный FIX по Disposition.

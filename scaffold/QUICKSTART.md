@@ -6,6 +6,7 @@
 2. Чеклист: [docs/checklists/new-repo.md](docs/checklists/new-repo.md)
 3. Канон: [AGENTS.md](AGENTS.md) · [docs/canon-owners.md](docs/canon-owners.md) · [docs/voice.md](docs/voice.md) (если UI)
 4. Prism: [prism/README.md](prism/README.md) · новый домен только через [DOMAIN.md](prism/DOMAIN.md)
+5. Между циклами: [prism/pisdetscheck.md](prism/pisdetscheck.md) (стой; не слой)
 
 Cursor: если нет `.cursor/rules/project-os.mdc` → скопируй из `cursor-rules/project-os.mdc`.
 

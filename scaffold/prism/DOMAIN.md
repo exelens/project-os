@@ -25,6 +25,8 @@
 | Изоляция tenant / IDOR | optional security-idor |
 | Слабые тесты механизмов | **01** |
 | God-файл / толстый facade | **04** god · **03** complexity |
+| Межцикловый triage / «стой» / pi.md | **не слой** — [pisdetscheck.md](./pisdetscheck.md) |
+| Generic senior-audit + «улучши промпт» | **не брать** в kit / не плодить слой |
 
 Durable карта механизмов (M*/H*) — **док продукта**, не слой Prism. После цикла findings → статус в доке; промпт Prism не дублирует карту.
 

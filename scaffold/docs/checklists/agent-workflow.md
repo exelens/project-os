@@ -12,3 +12,5 @@
 8. Не commit / не wipe `reviews/` без просьбы владельца.
 
 Если просят «аудит всего» — предложи Prism, не один гигантский чат.
+
+Между циклами Prism / перед короткой FIX-волной — стой [prism/pisdetscheck.md](../../prism/pisdetscheck.md) (scratch в корне; не слой, не merge в `B-*`). Не путать с generic «senior audit + улучши промпт».

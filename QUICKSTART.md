@@ -53,6 +53,7 @@ Cursor: `scripts/apply_to_repo.sh` сам ставит `.cursor/rules/project-os
 | Нужно | Куда |
 |-------|------|
 | Prism | `prism/README.md` |
+| Стой (межцикл triage) | `prism/pisdetscheck.md` — не слой |
 | Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |
 | Тон / словарь UI | `docs/voice.md` |
 | Осознанный долг | `docs/accepted-debt.md` |
