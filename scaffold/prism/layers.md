@@ -60,6 +60,8 @@ Wave K (K > 0) = оставшиеся P2+ из backlog + новые P0/P1, ес�
 ```
 Запусти 08 с scope = Wave K (или список B-xx…B-yy).
 Сверь только эти ID + их gates.
+На каждый ID — строка evidence (prism/evidence.md): supports | ACCEPTED.
+Без evidence → false-done / open; не green волны.
 Остальной backlog — open; не ставь RAG green на весь цикл.
 ```
 

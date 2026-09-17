@@ -4,6 +4,9 @@
 
 Если нет `reviews/07-merged-backlog.md` — **STOP**, не выдумывай green.
 
+Канон evidence: [`../evidence.md`](../evidence.md).  
+**Green волны запрещён**, если у in-scope ID нет строки evidence с `supports` или `ACCEPTED`.
+
 Цель:
 1. По scope (Wave K или список `B-*`): `done` | `ACCEPTED` | `open` | `false-done`
 2. Gates из раздела 5 `07-merged-backlog.md`
@@ -18,13 +21,15 @@ Domain/optional ID — не твой scope (верни в их слои). При
 
 Формат MD:
 1. Executive summary
-2. Closure matrix — ID | Claimed | Verified | Evidence
+2. Closure matrix — ID | Claimed | Verified | Evidence | Kind | Verdict  
+   (`Kind`/`Verdict` — как в `prism/evidence.md`; пустой Evidence = false-done)
 3. Gates
 4. Do-not-touch spot-check
 5. ACCEPTED residual
 6. Out of wave / reopen
 7. Verdict & next 3 moves
 
-Правила: лучше честный false-done, чем «всё done» без evidence.
+Правила: лучше честный false-done, чем «всё done» без evidence.  
+«Suite зелёный» без привязки к ID — не evidence.
 
-В чат — путь + RAG волны + false-done count.
+В чат — путь + RAG волны + false-done count + число ID без supports/ACCEPTED.

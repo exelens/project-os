@@ -1,6 +1,15 @@
 # Changelog
 
-## Unreleased
+## 1.3.0 — 2026-09-17
+
+- Compatibility shims: `scaffold/CLAUDE.md`, `scaffold/.github/copilot-instructions.md` → `AGENTS.md`
+- `scaffold/docs/workflow-weight.md` — L0–L3 ceremony (post-code → full Prism) + score table
+- `scaffold/docs/checklists/localize.md` — post-apply fill `TODO_` from repo evidence
+- `scaffold/prism/evidence.md` + tighter **08** — wave green only with supports/ACCEPTED rows
+- `scripts/lint_agents_md.sh` + kit CI `.github/workflows/lint-agents-md.yml`
+- Wired into `scaffold/AGENTS.md` · docs hub · stages · checklists · antipatterns · prism README/layers · Cursor rule · kit QUICKSTART/README/APPLY · `SOURCE.md`
+
+## 1.2.0 — 2026-09-17
 
 - `scaffold/prism/pisdetscheck.md` — **стой**: межцикловый READ-ONLY triage (не слой Prism; не в 07); wired in prism README · layers · DOMAIN · AGENTS · docs hub · agent-workflow · antipatterns
 

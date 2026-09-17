@@ -6,12 +6,15 @@
 |--------|------------|
 | [../AGENTS.md](../AGENTS.md) · [../tests/README.md](../tests/README.md) | Старт / тесты |
 | [stages.md](stages.md) | Этап продукта · открытый долг |
+| [workflow-weight.md](workflow-weight.md) | L0–L3: сколько церемонии (post-code → full Prism) |
 | [canon-owners.md](canon-owners.md) | SSOT: кто owner какого понятия |
 | [voice.md](voice.md) | Тон и словарь UI (витрина / кабинет); optional без UI |
 | [accepted-debt.md](accepted-debt.md) | Осознанный долг (ACCEPTED), не баги ядра |
 | [prism-cycle-summary.md](prism-cycle-summary.md) | Сводка последнего закрытого Prism-цикла |
 | [../prism/README.md](../prism/README.md) | Ритуал Prism |
+| [../prism/evidence.md](../prism/evidence.md) | Evidence волны для 08 |
 | [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой: межцикловый triage (не слой) |
+| [checklists/localize.md](checklists/localize.md) | После apply: заполнить TODO_ |
 | [checklists/agent-workflow.md](checklists/agent-workflow.md) | Агент в существующем репо |
 
 Добавляй строки по мере появления: database · deployment · monitoring · security · product domains.

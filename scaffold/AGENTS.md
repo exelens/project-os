@@ -24,15 +24,19 @@
 | Задача | Где |
 |--------|-----|
 | Старт дня 0 | [QUICKSTART.md](QUICKSTART.md) · [docs/checklists/new-repo.md](docs/checklists/new-repo.md) |
+| Заполнить TODO_ (localize) | [docs/checklists/localize.md](docs/checklists/localize.md) |
 | Соглашения | этот файл |
 | Тесты | [tests/README.md](tests/README.md) |
 | Этапы / долг | [docs/stages.md](docs/stages.md) · [docs/accepted-debt.md](docs/accepted-debt.md) |
+| Вес workflow (L0–L3) | [docs/workflow-weight.md](docs/workflow-weight.md) |
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
+| Evidence волны (08) | [prism/evidence.md](prism/evidence.md) |
 | Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
 | Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
 | Деплой / ops | `docs/deployment.md` — создать, когда появится деплой |
 | Агент в существующем репо | [docs/checklists/agent-workflow.md](docs/checklists/agent-workflow.md) |
+| Другие агенты | `CLAUDE.md` · `.github/copilot-instructions.md` → этот файл |
 
 ---
 
@@ -67,6 +71,8 @@
 - ❌ Менять код на этапе Prism audit / merge / verify
 - ❌ Wipe `reviews/` агентом после close цикла
 - ❌ Claim / copy без `docs/voice.md` (если UI есть) и без evidence
+- ❌ Полный Prism без нужды — см. `docs/workflow-weight.md`
+- ❌ Green волны 08 без evidence (`prism/evidence.md`)
 
 См. [agent-rules/antipatterns.md](agent-rules/antipatterns.md).
 
@@ -82,6 +88,8 @@
 ```
 
 Перед крупным изменением в «зоне риска» — второй проход / явный инвариант (`prism/layers.md`).
+
+Сколько церемонии: [docs/workflow-weight.md](docs/workflow-weight.md) (L0 post-code → L3 full Prism). Не открывай `reviews/` на L0.
 
 ### Post-code loop (после каждой задачи)
 
@@ -100,9 +108,10 @@
 
 ## PRISM
 
-- Перед крупным релизом / сменой контракта / после «серых» мест
+- Когда: уровень L2/L3 по [docs/workflow-weight.md](docs/workflow-weight.md) (не на каждый commit)
 - Не вместо CI: зелёный пайплайн ≠ «можно безопасно менять всё»
 - Ритуал: [prism/README.md](prism/README.md)
+- Закрытие волны: [prism/evidence.md](prism/evidence.md) — без evidence нет green в 08
 
 ---
 

@@ -26,6 +26,8 @@
 
 ## Процесс / Prism
 
+- ❌ Полный Prism (L3) на мелкую правку — см. `docs/workflow-weight.md`
+- ❌ Wave RAG green без evidence-строк на каждый ID (`prism/evidence.md`)
 - ❌ Писать код на слое audit / merge / verify
 - ❌ Мешать `B-*` и domain/optional ID в одном backlog
 - ❌ Новый domain-слой без ничейной зоны (дубль 03/04/«механизмы») — см. `prism/DOMAIN.md`
@@ -33,6 +35,7 @@
 - ❌ Объявить цикл green при незапущенном слое как будто он пройден
 - ❌ Агент удаляет `reviews/` после close
 - ❌ ACCEPTED без причины и критерия пересмотра
+- ❌ Дублировать правила в `CLAUDE.md` / Copilot вместо pointer на `AGENTS.md`
 
 ## Git / агент
 

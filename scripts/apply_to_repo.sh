@@ -112,7 +112,10 @@ fi
 
 echo
 echo "Done → $TARGET"
-echo "Next: open QUICKSTART.md and fill TODO_ markers (rg 'TODO_' -n)."
+echo "Next:"
+echo "  1. Fill TODO_ — or ask agent to follow docs/checklists/localize.md"
+echo "  2. rg 'TODO_' -n"
+echo "  3. $KIT_ROOT/scripts/lint_agents_md.sh \"$TARGET/AGENTS.md\"   # after fill"
 if [[ "$CURSOR_OK" -ne 1 ]]; then
   echo "Cursor rule: move cursor-rules/project-os.mdc → .cursor/rules/project-os.mdc"
 fi

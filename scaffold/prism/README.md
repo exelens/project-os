@@ -11,7 +11,9 @@
 | **Этот README** | Цикл и карта слоёв |
 | [layers.md](./layers.md) | Изоляция, параллель, merge, verify, anti-overlap |
 | `prompts/0N-*.md` | Роль слоя — в чат как `@prism/prompts/0N-…` |
+| [evidence.md](./evidence.md) | Evidence волны для **08** (без строки — нет green) |
 | [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (не слой; не в 07) |
+| [../docs/workflow-weight.md](../docs/workflow-weight.md) | Когда L2/L3 vs post-code / стой |
 | [../docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md) | Сводка последнего цикла |
 | [../docs/accepted-debt.md](../docs/accepted-debt.md) | ACCEPTED residual |
 | `../reviews/` | Scratch цикла; wipe — только владелец |
@@ -60,7 +62,9 @@
 1. Пустой `reviews/`.
 2. Параллельные аудиты по [layers.md](./layers.md).
 3. Partial **07** при наличии **02** (+ желательно **01**).
-4. Wave fixes → **08** со scope = Wave K.
+4. Wave fixes → **08** со scope = Wave K + таблица evidence ([evidence.md](./evidence.md)).
 5. Domains/optional — свои ID; verify в том же чате.
 6. Close по формуле в `layers.md`; агент не удаляет `reviews/`.
 7. Между циклами (по боли) — стой `@prism/pisdetscheck.md` → отдельный FIX по Disposition.
+
+Не уверен, нужен ли полный цикл? → [../docs/workflow-weight.md](../docs/workflow-weight.md).

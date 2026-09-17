@@ -8,9 +8,12 @@ Follow AGENTS.md and docs/canon-owners.md.
 - One SSOT per concept; no duplicate limits/labels without parity test.
 - Never return raw exception strings to clients.
 - No assert True / empty tests; prefer contract tests.
+- Pick ceremony level from docs/workflow-weight.md (L0–L3); do not open reviews/ on L0.
 - Risk zones need an explicit invariant (see prism/layers.md).
 - Prism audit/merge/verify: do not change code; do not wipe reviews/.
+- Prism wave close (08): require evidence rows per prism/evidence.md — no green without supports/ACCEPTED.
 - Inter-cycle triage: prism/pisdetscheck.md (стой) — not a Prism layer; do not merge into B-*.
+- After apply: prefer docs/checklists/localize.md to fill TODO_ from repo evidence.
 - Do not invent product claims; honesty docs win.
 - UI tone/copy: follow docs/voice.md when present; no shell/env in user-facing UI.
 - Post-code loop: after task → tests → docs → tests (single chat).

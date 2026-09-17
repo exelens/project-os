@@ -1,0 +1,23 @@
+name: lint-agents-md
+
+on:
+  push:
+    paths:
+      - 'scaffold/AGENTS.md'
+      - 'scripts/lint_agents_md.sh'
+      - '.github/workflows/lint-agents-md.yml'
+  pull_request:
+    paths:
+      - 'scaffold/AGENTS.md'
+      - 'scripts/lint_agents_md.sh'
+      - '.github/workflows/lint-agents-md.yml'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lint scaffold AGENTS.md
+        run: |
+          chmod +x scripts/lint_agents_md.sh
+          ./scripts/lint_agents_md.sh scaffold/AGENTS.md --allow-todo

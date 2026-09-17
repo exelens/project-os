@@ -13,12 +13,16 @@
 - [ ] Есть `AGENTS.md`, `docs/`, `prism/`, `tests/README.md`, `reviews/`, `.cursor/rules/project-os.mdc` (или `cursor-rules/project-os.mdc` для ручного переноса)
 - [ ] Kit `README.md` / `APPLY` / `LIFT` **не** лежат как корневой README продукта
 - [ ] Маркеры `TODO_` заполнены или явно отложены в `docs/stages.md`
+- [ ] Пройден [localize.md](localize.md) (агент или вручную)
+- [ ] Есть thin shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`
+- [ ] `lint_agents_md.sh AGENTS.md` зелёный (скрипт из kit `scripts/`)
 
 ## 2. Минимальный контур качества
 
 - [ ] Одна команда быстрого теста
 - [ ] Один lint/format (или «пока нет» в stages)
 - [ ] README: как запустить локально
+- [ ] Вес workflow понятен: [../workflow-weight.md](../workflow-weight.md)
 
 ## 3. Canon seed
 

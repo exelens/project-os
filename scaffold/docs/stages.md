@@ -20,5 +20,6 @@
 
 ## Ссылки
 
+- Вес workflow (L0–L3): [workflow-weight.md](workflow-weight.md)
 - Осознанный residual: [accepted-debt.md](accepted-debt.md)
 - Последний Prism: [prism-cycle-summary.md](prism-cycle-summary.md)
