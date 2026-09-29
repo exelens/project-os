@@ -13,6 +13,7 @@
 | `prompts/0N-*.md` | Роль слоя — в чат как `@prism/prompts/0N-…` |
 | [evidence.md](./evidence.md) | Evidence волны для **08** (без строки — нет green) |
 | [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (не слой; не в 07) |
+| [LatencyCheck.md](./LatencyCheck.md) | Медленные критические пути (не слой; не в 07); scratch `latencycheck.md` |
 | [../docs/workflow-weight.md](../docs/workflow-weight.md) | Когда L2/L3 vs post-code / стой |
 | [../docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md) | Сводка последнего цикла |
 | [../docs/accepted-debt.md](../docs/accepted-debt.md) | ACCEPTED residual |
@@ -55,6 +56,11 @@
 Между закрытыми циклами Prism, перед короткой FIX-волной: [pisdetscheck.md](./pisdetscheck.md).  
 Пишет scratch в корне продукта (`pisdetscheck.md` или `pi.md`). **Не** номер слоя, **не** `reviews/0N`, **не** merge в `B-*`. Не заменяет 01–08 и не идёт после «только что закрытого» цикла ради третьей сети. Generic «senior audit + улучши промпт» в kit **не** входит.
 
+### LatencyCheck (не слой)
+
+Когда критический путь висит секунды: [LatencyCheck.md](./LatencyCheck.md).  
+Scratch в корне (`latencycheck.md` или `lc.md`), находки `L-*`. **Не** слой, **не** `B-*`. Не замена **03** и не стой: вопрос только «какой await заставляет ждать и почему не кэш/фон». Отдельный чат FIX.
+
 ---
 
 ## Как запускать
@@ -66,5 +72,6 @@
 5. Domains/optional — свои ID; verify в том же чате.
 6. Close по формуле в `layers.md`; агент не удаляет `reviews/`.
 7. Между циклами (по боли) — стой `@prism/pisdetscheck.md` → отдельный FIX по Disposition.
+8. Экран или GET висит секундами — `@prism/LatencyCheck.md` → отдельный FIX. Не в том же чате, что стой или **03**.
 
 Не уверен, нужен ли полный цикл? → [../docs/workflow-weight.md](../docs/workflow-weight.md).

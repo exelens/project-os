@@ -35,4 +35,5 @@
 
 ## Notes
 
-`reviews/` после close **не** удалять агентом; wipe — владелец.
+`reviews/` после close **не** удалять агентом; wipe — владелец.  
+Межцикл (стой / LatencyCheck): одна строка close здесь; корневой scratch wipe после FIX. Это не строка слоя в Coverage.

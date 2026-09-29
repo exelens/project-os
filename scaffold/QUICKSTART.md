@@ -7,7 +7,7 @@
 3. Канон: [AGENTS.md](AGENTS.md) · [docs/canon-owners.md](docs/canon-owners.md) · [docs/voice.md](docs/voice.md) (если UI)
 4. Вес: [docs/workflow-weight.md](docs/workflow-weight.md) (L0–L3)
 5. Prism: [prism/README.md](prism/README.md) · evidence [prism/evidence.md](prism/evidence.md) · домен [DOMAIN.md](prism/DOMAIN.md)
-6. Между циклами: [prism/pisdetscheck.md](prism/pisdetscheck.md) (стой; не слой)
+6. Между циклами: [prism/pisdetscheck.md](prism/pisdetscheck.md) (стой; не слой). Секунды на GET: [prism/LatencyCheck.md](prism/LatencyCheck.md)
 
 Cursor: если нет `.cursor/rules/project-os.mdc` → скопируй из `cursor-rules/project-os.mdc`.  
 Другие агенты: `CLAUDE.md` / `.github/copilot-instructions.md` → `AGENTS.md`.

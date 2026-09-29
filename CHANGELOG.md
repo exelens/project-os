@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.5.0 — 2026-09-29
+
+- `scaffold/prism/LatencyCheck.md` — межцикловый READ-ONLY проход по хвостам «экран ждёт секунды» (не слой Prism; не в 07; `L-*` в корневом scratch)
+- Wired: prism README · layers · DOMAIN · стой (class `perf` не раздувать) · AGENTS · docs hub · workflow-weight L1 · agent-workflow · antipatterns · Cursor rule · kit README/QUICKSTART · `SOURCE.md`
+
+## 1.4.0 — 2026-09-25
+
+- Deploy / CI stubs (domain-agnostic, no secrets): `scaffold/docs/deployment.md` · `checklists/ci-cd.md` · `checklists/public-vps.md` · `scaffold/deploy/` (env + compose examples) · `ci.example.yml` · `healthcheck` / `backup_data` example scripts
+- Wired: docs hub · AGENTS · localize · new-repo · antipatterns · kit README/QUICKSTART · `SOURCE.md`
+- Still **not** a ready product CI/Makefile — stubs with `TODO_` / `.example`; bootstrap/deploy host scripts stay in the product
+
 ## 1.3.0 — 2026-09-17
 
 - Compatibility shims: `scaffold/CLAUDE.md`, `scaffold/.github/copilot-instructions.md` → `AGENTS.md`

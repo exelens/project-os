@@ -32,9 +32,10 @@
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
 | Evidence волны (08) | [prism/evidence.md](prism/evidence.md) |
 | Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
+| Latency (межцикл) | [prism/LatencyCheck.md](prism/LatencyCheck.md) — не слой; scratch `latencycheck.md` в корне |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
 | Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
-| Деплой / ops | `docs/deployment.md` — создать, когда появится деплой |
+| Деплой / ops | [docs/deployment.md](docs/deployment.md) · [deploy/README.md](deploy/README.md) · [docs/checklists/ci-cd.md](docs/checklists/ci-cd.md) · [docs/checklists/public-vps.md](docs/checklists/public-vps.md) |
 | Агент в существующем репо | [docs/checklists/agent-workflow.md](docs/checklists/agent-workflow.md) |
 | Другие агенты | `CLAUDE.md` · `.github/copilot-instructions.md` → этот файл |
 

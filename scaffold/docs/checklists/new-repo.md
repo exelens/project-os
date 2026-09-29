@@ -30,6 +30,13 @@
 - [ ] Этап в stages.md честный (Spike ≠ Open Beta)
 - [ ] UI/витрина есть → заполни `docs/voice.md` (аудитории · словарь · зоны); иначе «voice — later» в stages
 
+## 4. Public (когда появится, не день 0)
+
+- [ ] [ci-cd.md](ci-cd.md) — развилки CI vs CD зафиксированы
+- [ ] [../deployment.md](../deployment.md) + [../../deploy/](../../deploy/) — env/compose stubs адаптированы
+- [ ] [public-vps.md](public-vps.md) — чеклист подъёма начат
+- [ ] `ci.example.yml` → рабочий `ci.yml` **без** автодеплоя, пока ops не решил иначе
+
 ## DoD
 
 Агент по `@AGENTS.md` понимает: где SSOT, как тестить, что нельзя, как Prism — без истории другого проекта.
@@ -37,3 +44,4 @@
 ## Ссылки
 
 - Агент в существующем репо: [agent-workflow.md](agent-workflow.md)
+- CI/CD: [ci-cd.md](ci-cd.md)

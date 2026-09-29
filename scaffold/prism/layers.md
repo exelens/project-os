@@ -152,3 +152,5 @@ ACCEPTED → docs/accepted-debt.md
 Runtime ops, одноразовые миграции данных, ручной smoke хостинга, бизнес-решения «платим ли X» — фиксируй в `docs/stages.md` / ops runbook, не выдумывай finding в audit без evidence.
 
 **Стой (pisdetscheck)** — межцикловый triage вне нумерации слоёв: [pisdetscheck.md](./pisdetscheck.md). Не Gap и не слой 09+: не пишет в `reviews/`, не мержится в `B-*`, не reopen закрытых ID без новой evidence.
+
+**LatencyCheck** — те же правила для хвостов «экран ждёт секунды»: [LatencyCheck.md](./LatencyCheck.md). `L-*` только в корневом scratch, не в `reviews/`.

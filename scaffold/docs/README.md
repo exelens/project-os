@@ -14,10 +14,15 @@
 | [../prism/README.md](../prism/README.md) | Ритуал Prism |
 | [../prism/evidence.md](../prism/evidence.md) | Evidence волны для 08 |
 | [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой: межцикловый triage (не слой) |
+| [../prism/LatencyCheck.md](../prism/LatencyCheck.md) | LatencyCheck: секунды на критическом пути (не слой) |
+| [deployment.md](deployment.md) | Public / ops runbook (заполнить при деплое) |
 | [checklists/localize.md](checklists/localize.md) | После apply: заполнить TODO_ |
 | [checklists/agent-workflow.md](checklists/agent-workflow.md) | Агент в существующем репо |
+| [checklists/ci-cd.md](checklists/ci-cd.md) | CI ≠ CD · антипаттерны туториалов |
+| [checklists/public-vps.md](checklists/public-vps.md) | Подъём VPS → live |
+| [../deploy/README.md](../deploy/README.md) | Болванки compose / env / health / backup |
 
-Добавляй строки по мере появления: database · deployment · monitoring · security · product domains.
+Добавляй строки по мере появления: database · monitoring · security · product domains.
 
 ## Правила
 

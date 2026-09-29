@@ -21,7 +21,8 @@
 6. **Voice** — UI есть → заполни `docs/voice.md`; иначе «voice — later» в stages.
 7. **README продукта** — как поднять локально (не kit README).
 8. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.
-9. **Lint** — из корня продукта:  
+9. **Deploy** — если уже есть VPS/compose: заполни [deployment.md](../deployment.md) и [public-vps.md](public-vps.md); иначе «deploy — later» в stages. Не выдумывай хост/секреты.
+10. **Lint** — из корня продукта:  
    `path/to/project-os/scripts/lint_agents_md.sh AGENTS.md`  
    (или скопированный скрипт). Цель — exit 0 без `--allow-todo`.
 

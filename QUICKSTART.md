@@ -67,8 +67,10 @@ Shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`.
 | Prism | `prism/README.md` |
 | Evidence волны | `prism/evidence.md` |
 | Стой (межцикл triage) | `prism/pisdetscheck.md` — не слой |
+| Latency (межцикл) | `prism/LatencyCheck.md` — не слой; секунды на критическом GET |
 | Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |
 | Тон / словарь UI | `docs/voice.md` |
 | Осознанный долг | `docs/accepted-debt.md` |
+| Public / CI stubs | `docs/deployment.md` · `docs/checklists/ci-cd.md` · `deploy/` |
 | Lint AGENTS.md | `scripts/lint_agents_md.sh` (в kit) |
 | Вынести kit в отдельный git | [LIFT.md](./LIFT.md) |

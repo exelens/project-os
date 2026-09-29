@@ -1,0 +1,68 @@
+# Example CI — copy to ci.yml and fill commands from the product Makefile.
+# No auto-deploy (Public = ops / deploy script). See docs/checklists/ci-cd.md.
+
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install linter
+        run: |
+          python -m pip install --upgrade pip
+          # TODO: pin your linter (ruff / flake8 / …)
+          python -m pip install "ruff>=0.9,<0.17"
+      - name: Lint
+        run: |
+          # TODO: make lint  OR  ruff check …
+          ruff check .
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          # TODO: pip install -r requirements.txt -r requirements-dev.txt
+          echo "TODO: install product deps"
+      - name: Test
+        run: |
+          # TODO: make test
+          echo "TODO: run fast test suite"
+
+  # Optional frontend job — uncomment when UI exists
+  # vitest:
+  #   name: Frontend tests
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 15
+  #   steps:
+  #     - uses: actions/checkout@v5
+  #     - uses: actions/setup-node@v5
+  #       with:
+  #         node-version: "22"
+  #         cache: npm
+  #         cache-dependency-path: web/package-lock.json
+  #     - run: cd web && npm ci && npm test

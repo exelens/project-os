@@ -31,11 +31,20 @@
 - ❌ Писать код на слое audit / merge / verify
 - ❌ Мешать `B-*` и domain/optional ID в одном backlog
 - ❌ Новый domain-слой без ничейной зоны (дубль 03/04/«механизмы») — см. `prism/DOMAIN.md`
-- ❌ Делать из межциклового triage слой Prism (`pisdetscheck` / `pi.md` → не `0N`, не `reviews/`)
+- ❌ Делать из межциклового triage слой Prism (`pisdetscheck` / `pi.md` / `LatencyCheck` / `latencycheck.md` → не `0N`, не `reviews/`, не `B-*`)
 - ❌ Объявить цикл green при незапущенном слое как будто он пройден
 - ❌ Агент удаляет `reviews/` после close
 - ❌ ACCEPTED без причины и критерия пересмотра
 - ❌ Дублировать правила в `CLAUDE.md` / Copilot вместо pointer на `AGENTS.md`
+
+## CI / деплой
+
+- ❌ Автодеплой на каждый push в `main` без осознанного ops-решения
+- ❌ Перезапись prod `.env` из CI secrets на каждый деплой (затирает SMTP/OAuth/JWT)
+- ❌ Публиковать Postgres наружу «для удобства»
+- ❌ `--reload` приложения в Public compose
+- ❌ Bandit/pip-audit как слепой gate без triage / accepted-debt
+- ❌ Копипаста чужого FastAPI+Alembic+GHCR туториала поверх своей схемы БД
 
 ## Git / агент
 
