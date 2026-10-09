@@ -24,9 +24,11 @@
 | Врут цифры / honesty домена X | domain honesty **или** расширить уже существующий honesty-слой |
 | Изоляция tenant / IDOR | optional security-idor |
 | Слабые тесты механизмов | **01** |
-| God-файл / толстый facade | **04** god · **03** complexity |
+| God-файл / толстый facade (local) | **04** · **03** |
+| God LOC/fan-in · smear-таблица · peel | **не слой** — [ArchitectureCheck.md](./ArchitectureCheck.md) |
 | Межцикловый triage / «стой» / pi.md | **не слой** — [pisdetscheck.md](./pisdetscheck.md) |
 | Медленные GET / latency-хвосты | **не слой** — [LatencyCheck.md](./LatencyCheck.md) |
+| Путаница зерна / list≠detail / 2+ источника в KPI | optional/domain — [prompts/OPTIONAL-trust-contours.md](./prompts/OPTIONAL-trust-contours.md) + [../docs/trust-contours.md](../docs/trust-contours.md); **не** «слой механизмов» |
 | Generic senior-audit + «улучши промпт» | **не брать** в kit / не плодить слой |
 
 Durable карта механизмов (M*/H*) — **док продукта**, не слой Prism. После цикла findings → статус в доке; промпт Prism не дублирует карту.
@@ -74,5 +76,7 @@ ID: только TODO_PREFIX-*. Не мержить в B-* через 07.
 | Публичные поверхности отчёта | `R-*` | `docs/report-surfaces.md` |
 | Маркетинг honesty | `H-*` | `docs/marketing-honesty.md` |
 | Гостевая воронка | `G-*` | `docs/guest-funnel.md` |
+| Контуры доверия к цифрам | `T-*` | `docs/trust-contours.md` · [OPTIONAL-trust-contours](./prompts/OPTIONAL-trust-contours.md) |
 
-Префиксы — договорённость репо; главное — **не смешивать** с `B-*` и optional.
+Префиксы — договорённость репо; главное — **не смешивать** с `B-*` и optional.  
+`T-*` = trust contours; если optional infra уже занял `I-*`, инварианты внутри `docs/trust-contours.md` нумеруй как угодно (`I1…`), findings — всё равно `T-*`.

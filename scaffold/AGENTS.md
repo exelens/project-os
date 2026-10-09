@@ -33,8 +33,10 @@
 | Evidence волны (08) | [prism/evidence.md](prism/evidence.md) |
 | Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
 | Latency (межцикл) | [prism/LatencyCheck.md](prism/LatencyCheck.md) — не слой; scratch `latencycheck.md` в корне |
+| Architecture (межцикл) | [prism/ArchitectureCheck.md](prism/ArchitectureCheck.md) — не слой; scratch `architecturecheck.md` в корне |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
 | Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
+| Контуры доверия к цифрам | [docs/trust-contours.md](docs/trust-contours.md) — optional без аналитики; Prism `T-*` |
 | Деплой / ops | [docs/deployment.md](docs/deployment.md) · [deploy/README.md](deploy/README.md) · [docs/checklists/ci-cd.md](docs/checklists/ci-cd.md) · [docs/checklists/public-vps.md](docs/checklists/public-vps.md) |
 | Агент в существующем репо | [docs/checklists/agent-workflow.md](docs/checklists/agent-workflow.md) |
 | Другие агенты | `CLAUDE.md` · `.github/copilot-instructions.md` → этот файл |
@@ -74,6 +76,7 @@
 - ❌ Claim / copy без `docs/voice.md` (если UI есть) и без evidence
 - ❌ Полный Prism без нужды — см. `docs/workflow-weight.md`
 - ❌ Green волны 08 без evidence (`prism/evidence.md`)
+- ❌ Межцикл ArchitectureCheck / Latency / стой → не слой `0N` и не `B-*`
 
 См. [agent-rules/antipatterns.md](agent-rules/antipatterns.md).
 
@@ -113,6 +116,8 @@
 - Не вместо CI: зелёный пайплайн ≠ «можно безопасно менять всё»
 - Ритуал: [prism/README.md](prism/README.md)
 - Закрытие волны: [prism/evidence.md](prism/evidence.md) — без evidence нет green в 08
+- Межцикл L1: стой · LatencyCheck · ArchitectureCheck (не слои; не в одном чате)
+- Цифры / зерно: [docs/trust-contours.md](docs/trust-contours.md) + optional `T-*`
 
 ---
 

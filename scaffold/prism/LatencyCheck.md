@@ -2,10 +2,10 @@
 
 **Не слой Prism.** Нет номера `0N`, нет `reviews/NN-…`, не идёт в **07** merge и не переоткрывает закрытые `B-*` / domain ID без **новой** evidence.
 
-Межцикловый ритуал рядом со [стой](./pisdetscheck.md) и [CrossCheck](./CrossCheck.md).
+Межцикловый ритуал рядом со [стой](./pisdetscheck.md), [CrossCheck](./CrossCheck.md) и [ArchitectureCheck](./ArchitectureCheck.md).
 
 **Когда:** dogfood «тупит» · замер показал хвост · перед публичной полировкой отзывчивости · после волны кэша/прогрева (регресс).  
-**Не когда:** вместо полного Prism (01–08); не «ради третьей сети»; не в одном чате с generic senior-audit или со стой.
+**Не когда:** вместо полного Prism (01–08); не «ради третьей сети»; не в одном чате со стой / CrossCheck / ArchitectureCheck / generic senior-audit.
 
 **Артефакт:** `latencycheck.md` (или `lc.md`) в **корне продукта** — scratch. После FIX — wipe. Close — одна строка в [docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md). Residual → [docs/accepted-debt.md](../docs/accepted-debt.md).
 
@@ -46,6 +46,8 @@
 | **03** | грязь · smell · N+1 «вообще» | только хвост критического пути + миллисекунды |
 | Домен продукта | правда цифр и экрана | «почему GET долгий», не «верный ли результат» |
 | **CrossCheck** | дубли · противоречия логики | не SSOT |
+| **ArchitectureCheck** | god / smear / peel | не LOC-таблица |
+| Trust contours | зерно / honesty цифр | «почему GET долгий», не «верный ли результат» |
 | **Стой** | смешанная боль (есть class `perf`) | **только** классы ниже |
 
 Пересечения нормальны. Разное — **когда** гонять и **куда** писать (`L-*` в scratch, не `B-*` и не `P0-*`).
@@ -74,7 +76,9 @@
 - новая infra без evidence текущего хвоста
 - style / доли секунды без боли dogfood
 - ops-only smoke хоста
-- дубли и honesty без latency → CrossCheck / стой (pisdetscheck)
+- дубли без latency → CrossCheck / стой (pisdetscheck)
+- trust-grain / list≠detail → trust contours (T-*)
+- god/peel без latency → ArchitectureCheck
 
 Классы (ровно один на finding):
 1. sync-get — пересчёт / полная сборка / разбор файла внутри GET

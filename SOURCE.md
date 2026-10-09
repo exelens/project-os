@@ -10,6 +10,8 @@
 | Prism | Original know-how by Aleksej Lazutin (@exelens) — not derived from a third-party audit framework |
 | Pisdetscheck (стой) | Inter-cycle triage pattern distilled from product practice (`pi.md`); not a Prism layer — `scaffold/prism/pisdetscheck.md` |
 | LatencyCheck | Inter-cycle latency triage distilled from product practice; not a Prism layer — `scaffold/prism/LatencyCheck.md`. Which critical GET/await blocks the user, with ms evidence |
+| ArchitectureCheck | Inter-cycle peel triage (god / smear / boundary) distilled from product practice; not a Prism layer — `scaffold/prism/ArchitectureCheck.md` |
+| Trust contours | Selective DDD for number honesty (grain · list≠detail · multi-source); domain/optional template — `scaffold/docs/trust-contours.md` + `scaffold/prism/prompts/OPTIONAL-trust-contours.md` (`T-*`). Not CQRS / full DDD packages |
 | Compatibility shims | Thin `CLAUDE.md` / Copilot pointers — Agents Playbook pattern; canon stays `AGENTS.md` |
 | Workflow weight L0–L3 | Risk-tier idea adapted from portable agent-workflow kits; table is Project OS–specific |
 | Localize checklist | Post-apply fill ritual inspired by cursor-os localization; evidence-first, no invented stack |

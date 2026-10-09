@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.6.0 — 2026-10-09
+
+- `scaffold/prism/ArchitectureCheck.md` — межцикловый READ-ONLY peel (god / smear / boundary); не слой; `AC-*` в корневом scratch
+- `scaffold/docs/trust-contours.md` + `scaffold/prism/prompts/OPTIONAL-trust-contours.md` — selective DDD для цифр (`T-*`); не фиксированный «слой 23»
+- CrossCheck приведён к kit-формату (`TODO_`, close → prism-cycle-summary / accepted-debt) + таблица соседей (ArchitectureCheck / trust / Latency)
+- Wired: prism README · layers · DOMAIN · Latency/pisdetscheck соседи · AGENTS · docs hub · canon-owners · workflow-weight L1 · agent-workflow · antipatterns · Cursor rule · kit README/QUICKSTART · `SOURCE.md`
+
 ## 1.5.0 — 2026-09-29
 
 - `scaffold/prism/LatencyCheck.md` — межцикловый READ-ONLY проход по хвостам «экран ждёт секунды» (не слой Prism; не в 07; `L-*` в корневом scratch)

@@ -14,6 +14,8 @@ Follow AGENTS.md and docs/canon-owners.md.
 - Prism wave close (08): require evidence rows per prism/evidence.md — no green without supports/ACCEPTED.
 - Inter-cycle triage: prism/pisdetscheck.md (стой) — not a Prism layer; do not merge into B-*.
 - Slow critical path: prism/LatencyCheck.md — not a Prism layer; L-* stay in root scratch, not reviews/.
+- Structural peel: prism/ArchitectureCheck.md — not a Prism layer; AC-* stay in root scratch, not reviews/.
+- Number honesty / multi-grain: docs/trust-contours.md + prism/prompts/OPTIONAL-trust-contours.md (T-*); not CQRS by default.
 - After apply: prefer docs/checklists/localize.md to fill TODO_ from repo evidence.
 - Do not invent product claims; honesty docs win.
 - UI tone/copy: follow docs/voice.md when present; no shell/env in user-facing UI.

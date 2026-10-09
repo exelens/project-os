@@ -44,7 +44,7 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 3. Тесты = контракт поведения; нет `assert True`.  
 4. Вес workflow L0–L3 (`docs/workflow-weight.md`) — не каждый запрос = Prism.  
 5. Prism: audit → merge → волны → verify с evidence; новый domain-слой — только ничейная зона (`prism/DOMAIN.md`).  
-6. Между циклами — **стой** [`prism/pisdetscheck.md`](./scaffold/prism/pisdetscheck.md). Если экран висит секундами — [`prism/LatencyCheck.md`](./scaffold/prism/LatencyCheck.md). Оба не слои; scratch в корне продукта.  
+6. Между циклами — **стой** [`prism/pisdetscheck.md`](./scaffold/prism/pisdetscheck.md). Секунды на GET — [`LatencyCheck`](./scaffold/prism/LatencyCheck.md). God/peel — [`ArchitectureCheck`](./scaffold/prism/ArchitectureCheck.md). Все не слои; scratch в корне. Цифры/зерно — [`docs/trust-contours.md`](./scaffold/docs/trust-contours.md) + optional `T-*`.  
 7. ACCEPTED — в `docs/accepted-debt.md`.  
 8. Агент не wipe’ает `reviews/`.  
 9. Один `AGENTS.md`; `CLAUDE.md` / Copilot instructions — thin pointers.

@@ -4,37 +4,54 @@
 
 **Когда:** перед крупным Feature или рефактором модуля; когда «код раздулся» или старые паттерны мешают новым.
 
-**Не когда:** вместо полного Prism (01–08); не для опечаток; не для «лучших практик» без боли.
+**Не когда:** вместо полного Prism (01–08); не для опечаток; не для «лучших практик» без боли; не вместе с LatencyCheck / ArchitectureCheck / pisdetscheck в одном чате.
 
-**Артефакт:** `crosscheck.md` (или `cc.md`) в корне — **scratch**. После FIX wipe (как `reviews/`); close — строка в [docs/prism_errors.md](../docs/prism_errors.md).
+**Артефакт:** `crosscheck.md` (или `cc.md`) в корне — **scratch**. После FIX wipe (как `reviews/`); close — строка в [docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md). Residual → [docs/accepted-debt.md](../docs/accepted-debt.md).
 
 **В чат:** `@prism/CrossCheck.md`. После аудита — отдельный чат FIX по Disposition. На audit код не менять.
 
-Последний цикл: **2026-09-24 FIX closed** (scratch wiped) → [prism_errors.md](../docs/prism_errors.md) · baseline **917**/**609**.
-
 Заполни `TODO_` под продукт. Поиск: `rg 'TODO_' prism/CrossCheck.md`.
+
+---
+
+## Соседи (не конфликтуют)
+
+| Ритуал / слой | Вопрос | CrossCheck |
+|---------------|--------|------------|
+| **01–08** (+ domains) | контракт / UX / домен | другой календарь; findings → свои ID |
+| **04** | SSOT в цикле Prism | здесь — межцикловые дубли без `B-*` |
+| **03** | dirty / local smell | не complexity ради complexity |
+| **ArchitectureCheck** | god LOC/fan-in · smear · peel-границы | сюда не как god-таблица; → ArchitectureCheck |
+| Trust contours | зерно / list≠detail / источники в KPI | сюда не как Logic Duplication; → `T-*` |
+| **LatencyCheck** | GET секунды+ | чистый latency → туда |
+| **pisdetscheck** | смешанная dogfood-боль | чистый SSOT-dup → сюда; смесь классов → pisdetscheck |
+
+Один finding — один дом.
 
 ---
 
 ## Промпт (копировать в чат)
 
 ```
-Ты в репозитории Seoporka. Режим: READ-ONLY аудит. Код, тесты, docs канона продукта и каноны НЕ менять.
+Ты в репозитории TODO_PROJECT_NAME. Режим: READ-ONLY аудит. Код, тесты, docs канона продукта и каноны НЕ менять.
 
 Цель: найти дублирование логики, противоречия в реализации и ошибки изоляции, которые тормозят разработку или вызывают баги. Записать ТОЛЬКО в crosscheck.md в корне продукта (или cc.md).
 
 Скоуп (читай код + тесты; codegraph — ок, если есть):
 
-- seoporka/ (все модули, особенно те, что часто меняются вместе)
-- web/composables + shared UI кабинета (components/ · pages/projects)
+- TODO_SRC (модули, особенно те, что часто меняются вместе)
+- TODO_UI (composables + shared UI)
 - tests/ (покрытие именно той логики, что в коде, не выдуманной)
 
 Вне скоупа (не предлагать «починить», максимум одна строка ACCEPTED):
 
-- SEO Quest / Celery / SERP / Google / GSC / Wordstat
+- TODO_OUT_OF_SCOPE
 - стиль кода, имена, форматирование
 - «переписать на X», если текущий код работает
-- дубли, уже задокументированные в docs/заглушки.md (не docs/accepted-debt.md — файла нет)
+- дубли, уже в docs/accepted-debt.md
+- чистый cabinet latency (секунды+ / sync-on-GET) → LatencyCheck
+- god LOC/fan-in / smear-таблица / peel-границы без logic contradiction → ArchitectureCheck
+- trust-grain / list≠detail / смешение источников в KPI → trust contours (T-*)
 
 Ищи по классам (каждый finding — один класс):
 
@@ -48,7 +65,7 @@
 
 Формат артефакта — шаблон ниже. Максимум 20 findings.
 Хвост: код не меняй. Чужие reviews/* не трогай.
-После FIX — wipe crosscheck.md; close в docs/prism_errors.md.
+После FIX — wipe crosscheck.md; close — строка в docs/prism-cycle-summary.md; residual — docs/accepted-debt.md.
 ```
 
 ---

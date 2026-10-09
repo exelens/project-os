@@ -107,6 +107,8 @@ green цикла только когда:
 | Object authz / IDOR | optional security-idor |
 | Controls beyond IDOR | optional security-surface |
 | Infra scale (cache/DB/workers) | optional infra |
+| Зерно / list≠detail / источники в KPI | optional/domain trust contours (`T-*`) |
+| God LOC/fan-in · smear · peel (межцикл) | **не слой** — ArchitectureCheck |
 
 Домены продукта: дополни таблицу своими строками (см. [DOMAIN.md](./DOMAIN.md)). Не открывай чужой префикс ID из «удобного» слоя.
 
@@ -154,3 +156,8 @@ Runtime ops, одноразовые миграции данных, ручной 
 **Стой (pisdetscheck)** — межцикловый triage вне нумерации слоёв: [pisdetscheck.md](./pisdetscheck.md). Не Gap и не слой 09+: не пишет в `reviews/`, не мержится в `B-*`, не reopen закрытых ID без новой evidence.
 
 **LatencyCheck** — те же правила для хвостов «экран ждёт секунды»: [LatencyCheck.md](./LatencyCheck.md). `L-*` только в корневом scratch, не в `reviews/`.
+
+**ArchitectureCheck** — god / smear / peel-границы: [ArchitectureCheck.md](./ArchitectureCheck.md). `AC-*` в корневом scratch. Не **03** (local smell) и не **04** (назначить SSOT без таблицы LOC/fan-in).
+
+**03 local perf ≠ LatencyCheck** — OOM/N+1-shape в файле → **03**; GET секунды+ / sync-on-GET → LatencyCheck (не `B-*`).  
+**03/04 ≠ ArchitectureCheck** — local smell без fan-in → **03**; owner без LOC-таблицы → **04**; таблица god/smear/peel → ArchitectureCheck (не `B-*`).

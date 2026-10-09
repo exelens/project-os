@@ -14,6 +14,8 @@
 | [evidence.md](./evidence.md) | Evidence волны для **08** (без строки — нет green) |
 | [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (не слой; не в 07) |
 | [LatencyCheck.md](./LatencyCheck.md) | Медленные критические пути (не слой; не в 07); scratch `latencycheck.md` |
+| [ArchitectureCheck.md](./ArchitectureCheck.md) | God / smear / peel (не слой; не в 07); scratch `architecturecheck.md` |
+| [prompts/OPTIONAL-trust-contours.md](./prompts/OPTIONAL-trust-contours.md) | Контуры доверия к цифрам (`T-*`); канон [../docs/trust-contours.md](../docs/trust-contours.md) |
 | [../docs/workflow-weight.md](../docs/workflow-weight.md) | Когда L2/L3 vs post-code / стой |
 | [../docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md) | Сводка последнего цикла |
 | [../docs/accepted-debt.md](../docs/accepted-debt.md) | ACCEPTED residual |
@@ -61,6 +63,15 @@
 Когда критический путь висит секунды: [LatencyCheck.md](./LatencyCheck.md).  
 Scratch в корне (`latencycheck.md` или `lc.md`), находки `L-*`. **Не** слой, **не** `B-*`. Не замена **03** и не стой: вопрос только «какой await заставляет ждать и почему не кэш/фон». Отдельный чат FIX.
 
+### ArchitectureCheck (не слой)
+
+Когда код раздулся / перед peel: [ArchitectureCheck.md](./ArchitectureCheck.md).  
+Scratch в корне (`architecturecheck.md` или `ac.md`), находки `AC-*`. **Не** слой, **не** `B-*`. Не замена **03** (local smell) и не **04** (SSOT без LOC-таблицы). Отдельный чат FIX. Не вместе с CrossCheck / Latency / стой.
+
+### Trust contours (optional / domain)
+
+Когда несколько зёрен, list≠detail или 2+ источника в одной цифре: заполнить [../docs/trust-contours.md](../docs/trust-contours.md), затем `@prism/prompts/OPTIONAL-trust-contours.md`. ID `T-*` в `reviews/`. Номер слоя — по [DOMAIN.md](./DOMAIN.md), не обязательно «23».
+
 ---
 
 ## Как запускать
@@ -73,5 +84,7 @@ Scratch в корне (`latencycheck.md` или `lc.md`), находки `L-*`. 
 6. Close по формуле в `layers.md`; агент не удаляет `reviews/`.
 7. Между циклами (по боли) — стой `@prism/pisdetscheck.md` → отдельный FIX по Disposition.
 8. Экран или GET висит секундами — `@prism/LatencyCheck.md` → отдельный FIX. Не в том же чате, что стой или **03**.
+9. God / smear / peel — `@prism/ArchitectureCheck.md` → отдельный FIX. Не вместе с другими межциклами.
+10. Путаница зерна/источников — канон trust-contours + optional prompt (`T-*`).
 
 Не уверен, нужен ли полный цикл? → [../docs/workflow-weight.md](../docs/workflow-weight.md).

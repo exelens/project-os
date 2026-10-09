@@ -68,6 +68,8 @@ Shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`.
 | Evidence волны | `prism/evidence.md` |
 | Стой (межцикл triage) | `prism/pisdetscheck.md` — не слой |
 | Latency (межцикл) | `prism/LatencyCheck.md` — не слой; секунды на критическом GET |
+| Architecture (межцикл) | `prism/ArchitectureCheck.md` — не слой; god / smear / peel |
+| Trust contours | `docs/trust-contours.md` + `prism/prompts/OPTIONAL-trust-contours.md` (`T-*`) |
 | Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |
 | Тон / словарь UI | `docs/voice.md` |
 | Осознанный долг | `docs/accepted-debt.md` |

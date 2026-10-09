@@ -3,7 +3,7 @@
 **Не слой Prism.** Нет номера `0N`, нет префикса ID, нет `reviews/NN-…`, не идёт в **07** merge и не переоткрывает закрытые `B-*` / domain ID без **новой** evidence.
 
 **Когда:** между закрытыми циклами Prism, перед короткой FIX-волной по боли dogfood / Public.  
-**Не когда:** вместо полного Prism (01–08); не после только что закрытого цикла «ради третьей сети»; не вместе с generic «senior audit + улучши промпт». Хвосты «пользователь ждёт секунды на GET» с evidence в мс — [LatencyCheck.md](./LatencyCheck.md) (`L-*`), не раздувай здесь class `perf`.
+**Не когда:** вместо полного Prism (01–08); не после только что закрытого цикла «ради третьей сети»; не вместе с LatencyCheck / CrossCheck / ArchitectureCheck / generic «senior audit + улучши промпт». Хвосты «пользователь ждёт секунды на GET» с evidence в мс — [LatencyCheck.md](./LatencyCheck.md) (`L-*`), не раздувай здесь class `perf`. God/peel-таблица — [ArchitectureCheck.md](./ArchitectureCheck.md).
 
 **Артефакт:** только `pisdetscheck.md` в **корне продукта** (scratch; не канон, не DoD, не локи тестов на сам файл). Имя файла в корне можно оставить `pi.md`, если так принято в репо — тогда в чате явно: «пиши в pi.md по контракту pisdetscheck».
 

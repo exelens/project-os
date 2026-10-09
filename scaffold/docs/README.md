@@ -9,12 +9,14 @@
 | [workflow-weight.md](workflow-weight.md) | L0–L3: сколько церемонии (post-code → full Prism) |
 | [canon-owners.md](canon-owners.md) | SSOT: кто owner какого понятия |
 | [voice.md](voice.md) | Тон и словарь UI (витрина / кабинет); optional без UI |
+| [trust-contours.md](trust-contours.md) | Контуры доверия к цифрам (selective DDD); optional без аналитики |
 | [accepted-debt.md](accepted-debt.md) | Осознанный долг (ACCEPTED), не баги ядра |
 | [prism-cycle-summary.md](prism-cycle-summary.md) | Сводка последнего закрытого Prism-цикла |
 | [../prism/README.md](../prism/README.md) | Ритуал Prism |
 | [../prism/evidence.md](../prism/evidence.md) | Evidence волны для 08 |
 | [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой: межцикловый triage (не слой) |
 | [../prism/LatencyCheck.md](../prism/LatencyCheck.md) | LatencyCheck: секунды на критическом пути (не слой) |
+| [../prism/ArchitectureCheck.md](../prism/ArchitectureCheck.md) | ArchitectureCheck: god / smear / peel (не слой) |
 | [deployment.md](deployment.md) | Public / ops runbook (заполнить при деплое) |
 | [checklists/localize.md](checklists/localize.md) | После apply: заполнить TODO_ |
 | [checklists/agent-workflow.md](checklists/agent-workflow.md) | Агент в существующем репо |

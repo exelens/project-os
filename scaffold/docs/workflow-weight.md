@@ -7,7 +7,7 @@
 | Уровень | Когда | Что делать | Чего не делать |
 |---------|--------|------------|----------------|
 | **L0 — post-code** | Мелкая правка, известный контур, есть тест рядом | Post-code loop из `AGENTS.md` (тесты → docs → тесты) | Не открывать `reviews/`, не звать 01–08 |
-| **L1 — стой** | Между закрытыми Prism-циклами; короткая FIX-волна; «что-то болит», но не релиз | [`../prism/pisdetscheck.md`](../prism/pisdetscheck.md) → Disposition → точечный FIX. Если боль — секунды на критическом GET: [`../prism/LatencyCheck.md`](../prism/LatencyCheck.md) | Не merge в `B-*`; не новый полный цикл «ради третьей сети»; не мешать стой и LatencyCheck в одном чате |
+| **L1 — стой** | Между закрытыми Prism-циклами; короткая FIX-волна; «что-то болит», но не релиз | [`../prism/pisdetscheck.md`](../prism/pisdetscheck.md) → Disposition → точечный FIX. Секунды на GET: [`../prism/LatencyCheck.md`](../prism/LatencyCheck.md). God/peel: [`../prism/ArchitectureCheck.md`](../prism/ArchitectureCheck.md) | Не merge в `B-*`; не новый полный цикл «ради третьей сети»; не мешать стой / Latency / Architecture / CrossCheck в одном чате |
 | **L2 — light Prism** | Смена контракта в одном слое; серая зона в 1–2 областях | 1–2 audit-слоя + partial 07 + wave + **08 с evidence** | Не гонять все 01–06 «на всякий случай» |
 | **L3 — full Prism** | Крупный релиз, смена публичного контракта, много серых мест, недоверие к CI | Полный цикл [`../prism/README.md`](../prism/README.md) | Не заменять зелёным CI; не wipe `reviews/` агентом |
 

@@ -19,10 +19,11 @@
 4. **Canon seed** — 2–3 понятия в `docs/canon-owners.md` (даже TBD owner).
 5. **Этап** — `docs/stages.md` честный (Spike ≠ Open Beta).
 6. **Voice** — UI есть → заполни `docs/voice.md`; иначе «voice — later» в stages.
-7. **README продукта** — как поднять локально (не kit README).
-8. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.
-9. **Deploy** — если уже есть VPS/compose: заполни [deployment.md](../deployment.md) и [public-vps.md](public-vps.md); иначе «deploy — later» в stages. Не выдумывай хост/секреты.
-10. **Lint** — из корня продукта:  
+7. **Trust contours** — мультизерно / list≠detail / 2+ источника в KPI → заполни `docs/trust-contours.md`; иначе «trust contours — later» в stages (не плоди пустой SSOT).
+8. **README продукта** — как поднять локально (не kit README).
+9. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.
+10. **Deploy** — если уже есть VPS/compose: заполни [deployment.md](../deployment.md) и [public-vps.md](public-vps.md); иначе «deploy — later» в stages. Не выдумывай хост/секреты.
+11. **Lint** — из корня продукта:  
    `path/to/project-os/scripts/lint_agents_md.sh AGENTS.md`  
    (или скопированный скрипт). Цель — exit 0 без `--allow-todo`.
 

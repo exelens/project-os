@@ -8,9 +8,11 @@
 | TODO_CONCEPT_B (TODO_описание) | TODO_MODULE | — | TODO_TEST |
 | TODO_CONCEPT_C (TODO_описание) | TODO_MODULE | — | TODO_TEST |
 | UI tone / словарь витрины (если есть UI) | — | [voice.md](voice.md) | TODO_COPY_LOCK_TEST |
+| Trust grain / list≠history / источники KPI (если аналитика) | TODO_TRUST_MODULE | [trust-contours.md](trust-contours.md) | TODO_TRUST_LOCK_TEST |
 
 Строки — замени на понятия своего продукта. Поиск: `TODO_`.  
-Строка voice — заполни или удали, если продукта без пользовательского UI.
+Строка voice — заполни или удали, если продукта без пользовательского UI.  
+Строка trust — заполни или удали, если нет мультизерна / нескольких источников в цифрах.
 
 ## Правила
 
