@@ -9,6 +9,8 @@
 
 **Артефакт:** `latencycheck.md` (или `lc.md`) в **корне продукта** — scratch. После FIX — wipe. Close — одна строка в [docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md). Residual → [docs/accepted-debt.md](../docs/accepted-debt.md).
 
+**ID:** по умолчанию `L-*` в scratch. Если домен продукта уже занял `L-*` (блог / Lighthouse-слой) — пиши **`LC-*`** и зафиксируй выбор в `prism/layers.md` § Префиксы. Не мержить в `B-*`.
+
 **В чат:** `@prism/LatencyCheck.md` → audit READ-ONLY → отдельный чат FIX по Disposition. На audit код не менять.
 
 Заполни `TODO_` под продукт. Поиск: `rg 'TODO_' prism/LatencyCheck.md`.
@@ -50,7 +52,7 @@
 | Trust contours | зерно / honesty цифр | «почему GET долгий», не «верный ли результат» |
 | **Стой** | смешанная боль (есть class `perf`) | **только** классы ниже |
 
-Пересечения нормальны. Разное — **когда** гонять и **куда** писать (`L-*` в scratch, не `B-*` и не `P0-*`).
+Пересечения нормальны. Разное — **когда** гонять и **куда** писать (`L-*` или `LC-*` в scratch, не `B-*` и не findings стой).
 
 ---
 

@@ -1,11 +1,13 @@
 # Pisdetscheck — стой (межцикловый triage)
 
-**Не слой Prism.** Нет номера `0N`, нет префикса ID, нет `reviews/NN-…`, не идёт в **07** merge и не переоткрывает закрытые `B-*` / domain ID без **новой** evidence.
+**Не слой Prism.** Нет номера `0N`, нет `reviews/NN-…`, не идёт в **07** merge и не переоткрывает закрытые `B-*` / domain ID без **новой** evidence.
 
 **Когда:** между закрытыми циклами Prism, перед короткой FIX-волной по боли dogfood / Public.  
-**Не когда:** вместо полного Prism (01–08); не после только что закрытого цикла «ради третьей сети»; не вместе с LatencyCheck / CrossCheck / ArchitectureCheck / generic «senior audit + улучши промпт». Хвосты «пользователь ждёт секунды на GET» с evidence в мс — [LatencyCheck.md](./LatencyCheck.md) (`L-*`), не раздувай здесь class `perf`. God/peel-таблица — [ArchitectureCheck.md](./ArchitectureCheck.md).
+**Не когда:** вместо полного Prism (01–08); не после только что закрытого цикла «ради третьей сети»; не вместе с LatencyCheck / CrossCheck / ArchitectureCheck / generic «senior audit + улучши промпт». Хвосты «пользователь ждёт секунды на GET» с evidence в мс — [LatencyCheck.md](./LatencyCheck.md) (`L-*` / `LC-*`), не раздувай здесь class `perf`. Чистый SSOT-дубль без боли → [CrossCheck](./CrossCheck.md). God/peel-таблица — [ArchitectureCheck.md](./ArchitectureCheck.md).
 
 **Артефакт:** только `pisdetscheck.md` в **корне продукта** (scratch; не канон, не DoD, не локи тестов на сам файл). Имя файла в корне можно оставить `pi.md`, если так принято в репо — тогда в чате явно: «пиши в pi.md по контракту pisdetscheck».
+
+**ID:** рекомендуемый префикс в scratch — **`PC-*`** (не `P-*`, если crawl/parser-domain займёт `P`; не путать с Priority P0/P1 в колонке важности). Зафиксируй в `prism/layers.md` § Префиксы.
 
 В чат: `@prism/pisdetscheck.md` (или путь к этому файлу). После аудита — **отдельный** чат FIX по Disposition; на audit код не менять.
 
@@ -52,7 +54,8 @@
 - 3–5 главных рисков одной строкой каждый
 
 ## Findings
-### P0-1 · <короткий title>
+### PC-01 · <короткий title>
+- Priority: P0 | P1 | P2
 - Class: logic|dup|bug|perf|isolation|canon
 - Where: path:symbol (или path ±lines)
 - Evidence: что именно сломано / как воспроизвести (тест или сценарий)
@@ -60,13 +63,14 @@
 - Disposition: FIX | ACCEPTED | DEFER — одно слово + почему
 - Not: что НЕ предлагаешь чинить рядом
 
-(дальше P0…, затем P1, P2; ACCEPTED — отдельной секцией без «надо срочно»)
+(дальше PC-02…; группируй по Priority; ACCEPTED — отдельной секцией без «надо срочно»)
 
 ## Out of scope / already closed
 - список тем, которые сознательно пропущены + ссылка на accepted-debt / prism-cycle-summary
 ```
 
 Правила triage:
+- ID = `PC-NN` (стабильный); Priority = отдельное поле P0/P1/P2 — не путать с ID
 - P0 = ломает изоляцию, врёт KPI/алертам, data loss, forgeable secret
 - P1 = дубль SSOT / реальный баг без потери данных
 - P2 = узкое место / maintainability с evidence

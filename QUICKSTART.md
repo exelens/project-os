@@ -37,9 +37,9 @@ rg 'TODO_' -n
 | `docs/stages.md` | честный этап (Spike / …) |
 | `docs/workflow-weight.md` | ориентир L0–L3 (обычно не правят) |
 | `docs/canon-owners.md` | 2–3 реальных понятия |
-| `docs/voice.md` | тон UI (если витрина/кабинет; иначе «voice — later» в stages) |
+| `docs/voice.md` | тон UI: тиры · словарь · эталон first screen (если витрина; иначе «voice — later» в stages) |
 | `.env.example` | имена переменных без секретов |
-| `tests/README.md` | как запускать тесты |
+| `tests/README.md` | как запускать тесты (+ Hypothesis · Schemathesis · mutate) |
 | `README.md` | как поднять локально |
 
 Cursor: `scripts/apply_to_repo.sh` сам ставит `.cursor/rules/project-os.mdc` (и portable-копию в `cursor-rules/`); при ручном переносе — из `cursor-rules/project-os.mdc`.  

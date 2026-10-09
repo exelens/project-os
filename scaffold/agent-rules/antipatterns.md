@@ -7,7 +7,8 @@
 - ❌ Маркетинговый claim без evidence / без honesty-дока
 - ❌ Второй «voice/vision» в чате вместо `docs/voice.md`
 - ❌ Shell / env / пути скриптов в пользовательском UI
-- ❌ Жаргон домена на first screen без перевода (см. voice)
+- ❌ Жаргон домена / ops на first screen без перевода (см. voice)
+- ❌ Flash «пусто» до fetch · пачка ачивок на пустом успехе · ведущие emoji в primary title (см. voice)
 
 ## Код и API
 
@@ -21,8 +22,13 @@
 - ❌ `assert True` / пустой тест
 - ❌ Дубль общих фикстур клиента/БД вне одного места
 - ❌ Shared mutable process state без сброса между тестами
+- ❌ Локальный `.env` ломает CI — нет env wipe / data-root helper
 - ❌ Удалить «похожий» тест без класса twin A/B/C
 - ❌ False green: assert на неправильной БД/моке/контуре
+- ❌ Живые внешние API / токены в default suite
+- ❌ Путать Hypothesis (свойства логики) · Schemathesis (API fuzz) · mutation (ломаем код) — разные команды и цели
+- ❌ Schemathesis / mutmut «на весь мир» в default CI без denylist / без точечного скоупа
+- ❌ Coverage % как единственный DoD без property / freeze / kill-wave на горячей логике
 
 ## Процесс / Prism
 

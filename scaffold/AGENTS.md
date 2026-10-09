@@ -71,6 +71,7 @@
 - ❌ `assert True` / пустые тесты
 - ❌ Дублировать общие тестовые фикстуры вне одного места
 - ❌ Писать в общую БД/очередь/кэш в тестах без изоляции
+- ❌ Нет Hypothesis (логика) / Schemathesis (API) при зрелом HTTP+чистых формулах — см. `tests/README.md`
 - ❌ Менять код на этапе Prism audit / merge / verify
 - ❌ Wipe `reviews/` агентом после close цикла
 - ❌ Claim / copy без `docs/voice.md` (если UI есть) и без evidence

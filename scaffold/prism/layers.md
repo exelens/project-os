@@ -114,6 +114,79 @@ green цикла только когда:
 
 **Новый домен только при ничейной зоне** — gate и ложные кандидаты («механизмы», «рефакторинг ядра») в [DOMAIN.md](./DOMAIN.md). Иначе расширь **03**/**04**/existing domain или запусти скоуп-цикл, не плоди слой.
 
+### Префиксы ID (не сталкивать)
+
+| Префикс | Кто | Не путать с |
+|---------|-----|-------------|
+| `B-*` | ядро через **07** | domain / optional |
+| domain (`C`/`A`/`R`/…) | свои слои 09+ | не в `B-*` |
+| `S-*` / `X-*` / `I-*` | optional security / surface / infra | score/queue product features |
+| `T-*` | trust contours (optional/domain) | tools / tickets, если займёшь другую букву |
+| `L-*` | **LatencyCheck** (scratch в корне) | blog / Lighthouse — если домен блога нужен, бери другую букву **или** переименуй latency в `LC-*` |
+| `AC-*` | ArchitectureCheck | не `A-*` admin без явной договорённости |
+| `PC-*` / стой | pisdetscheck (рекомендуемый префикс в scratch) | crawl/parser domain `P-*`, если заведён |
+
+Перед новым префиксом: `rg` по `prism/` и `docs/prism-cycle-summary.md`. Одна буква — одна роль в репо.
+
+### Горячие швы (частые ложные дубли)
+
+Шаблоны — заполни своими слоями/ID. Одна находка на одной строке UI → **один** слой по теме + «см. N».
+
+**Один артефакт · N поверхностей** (demo / public / owner)  
+- Surface-domain — согласованность display, CTA, counters, CSS-классы правды на всех поверхностях.  
+- Owner-domain — IA/данные/навигация владельца на «своей» ветке, не отдельный тон ради удобства.  
+- Funnel-domain — путь гостя до публичной поверхности; не аудировать product empty другого слоя.  
+Находка «на demo иначе, чем в кабинете» → сначала surface-domain, не chrome **05**.
+
+**Map ≠ display**  
+- Truth/score-domain — семантика kind / map (что значит «красное»); формула метрик **не** меняется ради ярлыка.  
+- Surface-domain — счётчики, CSS, copy шапки на поверхностях.  
+Ярлык врёт → сначала map, потом CSS/copy.
+
+**Chrome ≠ product DoD**  
+- **05** — nav / a11y shell / loading-empty flash / plan-limit MSG UX.  
+- Tools/catalog-domain — матрица slug × DoD; не общий shell.  
+- **05** не строит матрицу продукта; domain не аудирует весь chrome.
+
+**Funnel CTA ≠ surface page**  
+- Funnel — secondary CTA с entry → demo/теaser, без лжи «идеальный эталон».  
+- Surface — сам demo/teaser product.  
+- **05** — a11y shell CTA ок; product copy demo → Hand-off funnel/surface.
+
+**Наш public HTML ≠ чужой ingest**  
+- **06** — бот видит **наш** HTML / OG / robots.  
+- Ingest/crawl-domain — покрытие **чужого** сайта / парсер.  
+Не открывай findings одного в артефакте другого.
+
+**Coverage ≠ weights**  
+- Ingest-domain — хватает ли данных/страниц.  
+- Score/truth-domain — веса / XP / kind при уже полученных данных.
+
+**Display money ≠ payment path**  
+- Owner-domain — подписи срока/лимита/«баланса» в UI.  
+- **04** — SSOT чисел плана.  
+- **02** — wire keys summary.  
+- Billing-domain — checkout / webhook / refund.  
+- Secrets в клиенте → optional security-surface.  
+- Витрина «по заявке» / claims → honesty-domain.
+
+**UX states ≠ marketing claims**  
+- **05** — empty/error/loading после гидрации; тон → [docs/voice.md](../docs/voice.md).  
+- Honesty-domain — матрица claim→evidence.  
+- Guest poll journey целиком → funnel-domain, не только **05**.
+
+**Tab existence ≠ lifecycle**  
+- Owner/admin chrome «есть вкладка X» → owner/admin-domain.  
+- Lifecycle тикета/feedback → свой domain (если заведён).
+
+**IDOR ≠ control matrix**  
+- optional IDOR — object authz / tenant.  
+- optional security-surface — SSRF / CSP / rate-limit / secrets.  
+- **02** cookie/shape ≠ «user A читает ресурс B».  
+- **03** «security smell» ≠ полный IDOR.
+
+**Orphan-поверхности** (нет своего слоя) — чеклист внутри существующего слоя + Hand-off; новый 09+ только по gate [DOMAIN.md](./DOMAIN.md). Заведи таблицу в `prism/README.md` продукта: поверхность | кто смотрит | не путать с.
+
 ---
 
 ## Lifecycle
@@ -153,9 +226,11 @@ ACCEPTED → docs/accepted-debt.md
 
 Runtime ops, одноразовые миграции данных, ручной smoke хостинга, бизнес-решения «платим ли X» — фиксируй в `docs/stages.md` / ops runbook, не выдумывай finding в audit без evidence.
 
+Schemathesis / полный mutation / browser e2e как **merge-gate** — политика продукта (`tests/README.md`), не слой Prism; отсутствие команды/канона при зрелом API — finding слоя **01**, не silent green.
+
 **Стой (pisdetscheck)** — межцикловый triage вне нумерации слоёв: [pisdetscheck.md](./pisdetscheck.md). Не Gap и не слой 09+: не пишет в `reviews/`, не мержится в `B-*`, не reopen закрытых ID без новой evidence.
 
-**LatencyCheck** — те же правила для хвостов «экран ждёт секунды»: [LatencyCheck.md](./LatencyCheck.md). `L-*` только в корневом scratch, не в `reviews/`.
+**LatencyCheck** — те же правила для хвостов «экран ждёт секунды»: [LatencyCheck.md](./LatencyCheck.md). `L-*` (или `LC-*` при коллизии) только в корневом scratch, не в `reviews/`.
 
 **ArchitectureCheck** — god / smear / peel-границы: [ArchitectureCheck.md](./ArchitectureCheck.md). `AC-*` в корневом scratch. Не **03** (local smell) и не **04** (назначить SSOT без таблицы LOC/fan-in).
 

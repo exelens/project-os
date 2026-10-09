@@ -14,11 +14,11 @@
 ## Порядок
 
 1. **Идентичность** — `AGENTS.md`: имя продукта, дата, remote, стек (1 строка).
-2. **Команды** — быстрый тест / полный suite / lint из реальных скриптов; иначе «пока нет» в stages.
+2. **Команды** — быстрый тест / полный suite / lint из реальных скриптов; иначе «пока нет» в stages. Заполни в `tests/README.md`: TODO_FAST · TODO_FE · TODO_SCHEMA (Schemathesis) · TODO_HYPOTHESIS · TODO_MUTATE — или Gap.
 3. **Контур** — `.env.example` имена; БД / очередь — да/нет по коду.
 4. **Canon seed** — 2–3 понятия в `docs/canon-owners.md` (даже TBD owner).
 5. **Этап** — `docs/stages.md` честный (Spike ≠ Open Beta).
-6. **Voice** — UI есть → заполни `docs/voice.md`; иначе «voice — later» в stages.
+6. **Voice** — UI есть → заполни `docs/voice.md` (тиры аудиторий · словарь · баны · эталон first screen · FOUC/emoji если уместно); иначе «voice — later» в stages.
 7. **Trust contours** — мультизерно / list≠detail / 2+ источника в KPI → заполни `docs/trust-contours.md`; иначе «trust contours — later» в stages (не плоди пустой SSOT).
 8. **README продукта** — как поднять локально (не kit README).
 9. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.

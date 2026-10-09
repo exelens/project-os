@@ -1,5 +1,20 @@
 # Changelog
 
+## 1.8.0 — 2026-10-09
+
+- `scaffold/tests/README.md` — suite bar from product practice: **Hypothesis** (pure logic, in fast CI) · **Schemathesis** (OpenAPI live fuzz, separate job) · targeted mutation · env wipe · coverage-as-map · suite map table
+- Prism **01** categories: hypothesis-gap / schema-gap / mutation-gap + suite map section
+- Wired: antipatterns · conventions · AGENTS · localize · new-repo · Cursor rule · `SOURCE.md`
+
+## 1.7.0 — 2026-10-09
+
+- `scaffold/docs/voice.md` — portable practice pack: audience tiers · dictionary bans · first-screen exemplar · FOUC · emoji/achievements · plural · Prism hand-off (still `TODO_`, no product copy)
+- `scaffold/prism/layers.md` — § Префиксы ID + § Горячие швы (domain-agnostic templates)
+- `scaffold/prism/DOMAIN.md` — richer domain prompt template (voice · Acceptance · Smoke · Do-not-change-yet · Sync)
+- `scaffold/prism/prompts/05-ux.md` — journey / voice / FOUC / plan-limit hand-offs
+- LatencyCheck `LC-*` collision note · pisdetscheck findings `PC-*` (Priority ≠ ID)
+- Wired: localize checklist · `SOURCE.md`
+
 ## 1.6.0 — 2026-10-09
 
 - `scaffold/prism/ArchitectureCheck.md` — межцикловый READ-ONLY peel (god / smear / boundary); не слой; `AC-*` в корневом scratch

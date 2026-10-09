@@ -6,8 +6,9 @@
 | Extracted on | 2026-09-04 |
 | Intent | Domain-agnostic Project OS for future repos |
 | Not included | Product code, domain-specific docs, stack lock-in |
-| Voice pattern | Abstracted from product `docs/voice.md` practice (audiences · dictionary · zones · lock test) — no product copy |
+| Voice pattern | Abstracted from product `docs/voice.md` practice (audience tiers · dictionary · bans · first-screen exemplar · FOUC · emoji · plural · lock test · Prism hand-off) — no product copy |
 | Prism | Original know-how by Aleksej Lazutin (@exelens) — not derived from a third-party audit framework |
+| Hot seams | Portable anti-overlap templates distilled from product `про слои.md` § Горячие швы (multi-surface · map≠display · chrome≠DoD · funnel≠surface · our HTML≠ingest · money display≠payment) — no product paths |
 | Pisdetscheck (стой) | Inter-cycle triage pattern distilled from product practice (`pi.md`); not a Prism layer — `scaffold/prism/pisdetscheck.md` |
 | LatencyCheck | Inter-cycle latency triage distilled from product practice; not a Prism layer — `scaffold/prism/LatencyCheck.md`. Which critical GET/await blocks the user, with ms evidence |
 | ArchitectureCheck | Inter-cycle peel triage (god / smear / boundary) distilled from product practice; not a Prism layer — `scaffold/prism/ArchitectureCheck.md` |
@@ -16,6 +17,7 @@
 | Workflow weight L0–L3 | Risk-tier idea adapted from portable agent-workflow kits; table is Project OS–specific |
 | Localize checklist | Post-apply fill ritual inspired by cursor-os localization; evidence-first, no invented stack |
 | Wave evidence | Closure gate idea (criteria ↔ evidence) adapted lightly; markdown-only, no external CLI lock-in |
+| Test suite bar | Distilled from product practice (Seoporka `tests/README.md`): Hypothesis in CI for pure logic · Schemathesis OpenAPI live fuzz outside fast suite · targeted mutmut · env wipe · coverage-as-map — no product paths/counts |
 | AGENTS.md lint | Section/pointer/`TODO_` checks — cookbook-style gate, shell-only |
 | Deploy / CI stubs | Distilled from private product Public VPS practice (compose shape · env on server · health/backup · CI without auto-deploy). Rejected from generic tutorials: rewrite `.env` from GH secrets · Alembic-as-must · GHCR+SSH as only path · Bandit gate without triage. No product hostnames, passwords, or OAuth IDs. |
 

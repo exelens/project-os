@@ -19,16 +19,19 @@
 
 ## 2. Минимальный контур качества
 
-- [ ] Одна команда быстрого теста
+- [ ] Одна команда быстрого теста (`tests/README.md` TODO_FAST)
 - [ ] Один lint/format (или «пока нет» в stages)
 - [ ] README: как запустить локально
 - [ ] Вес workflow понятен: [../workflow-weight.md](../workflow-weight.md)
+- [ ] Есть чистые формулы / helpers → запланируй Hypothesis (или аналог) в fast suite
+- [ ] Есть OpenAPI / HTTP API → запланируй Schemathesis (отдельная команда; не обязательно day-0 CI)
+- [ ] Горячие KPI/пороги → mutation точечно (Gap в stages ок на Spike)
 
 ## 3. Canon seed
 
 - [ ] 2–3 строки в canon-owners (даже TBD owner)
 - [ ] Этап в stages.md честный (Spike ≠ Open Beta)
-- [ ] UI/витрина есть → заполни `docs/voice.md` (аудитории · словарь · зоны); иначе «voice — later» в stages
+- [ ] UI/витрина есть → заполни `docs/voice.md` (тиры · словарь · баны · эталон first screen); иначе «voice — later» в stages
 
 ## 4. Public (когда появится, не день 0)
 
