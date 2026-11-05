@@ -7,11 +7,41 @@
 
 > Поиск незаполненного: `TODO_`. После заполнения этот блок-цитату можно удалить.
 
+Этот файл — **короткая OS для агента**, не changelog и не дамп истории Prism. Dated-хроника → `CHANGELOG.md` / `docs/prism-cycle-summary.md` / закрытые туду. Сюда — только то, без чего агент ошибётся сегодня.
+
+---
+
+## Текущий режим разработки
+
+**Приоритет:** TODO_MODE — `BUILD` | `FINISH, NOT EXPAND` | `AUDIT ONLY`
+
+Заполни по этапу (`docs/stages.md`). На Spike обычно `BUILD`. На Lab finish / приёмке — `FINISH, NOT EXPAND`. На Prism audit / UAT без GO на правки — `AUDIT ONLY`.
+
+1. Явный **GO владельца** имеет приоритет над списками «не сделано» и старыми планами.
+2. Запись «не сделано» / open debt **не является** разрешением на реализацию.
+3. До отдельного GO не начинать TODO_FORBIDDEN_EXPAND (фазы / фичи / Public deploy — перечисли или «пока нет»).
+4. Во время Prism / audit / UAT не менять продукт, если GO разрешает только проверку.
+5. Не плодить повторные тесты без проверки существующего покрытия.
+6. Результат проверки — доказательства, реальные дефекты и минимальные исправления.
+7. Не объявлять PASS без реального прогона или при блокировке внешними данными.
+8. Не делать commit / push / deploy без явного разрешения.
+
+### Сделано (агенту кратко)
+
+- TODO: 3–8 пуль текущего ядра (не вся история репо)
+
+### Не сделано / later (не очередь «сейчас»)
+
+- **Сейчас:** TODO: что в фокусе этапа
+- **Нужен GO:** TODO: что нельзя начинать без разрешения
+- **Отложено:** TODO: later / ACCEPTED — см. [docs/accepted-debt.md](docs/accepted-debt.md)
+
 ---
 
 ## ОБЗОР
 
 - **Продукт (1–3 предложения):** TODO: 1–3 предложения о продукте
+- **Границы (соседи):** TODO: «нет» | кратко что не этот продукт + ссылка на [docs/light-ddd.md](docs/light-ddd.md)
 - **Пользовательский путь (коротко):** TODO: короткий путь пользователя
 - **Конфиг / env:** TODO: .env / config entrypoint — секреты не в git
 - **БД:** TODO: нет | Postgres | … — SSOT-док заведи при появлении БД (`docs/database.md`)
@@ -29,6 +59,7 @@
 | Тесты | [tests/README.md](tests/README.md) |
 | Этапы / долг | [docs/stages.md](docs/stages.md) · [docs/accepted-debt.md](docs/accepted-debt.md) |
 | Вес workflow (L0–L3) | [docs/workflow-weight.md](docs/workflow-weight.md) |
+| Лёгкий DDD (контексты) | [docs/light-ddd.md](docs/light-ddd.md) |
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
 | Evidence волны (08) | [prism/evidence.md](prism/evidence.md) |
 | Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
@@ -47,7 +78,8 @@
 
 Числа, лейблы, лимиты, error strings — **только** через таблицу в [docs/canon-owners.md](docs/canon-owners.md).  
 Не дублировать константы «для удобства». FE≡BE — parity-тест, не копипаста без гейта.  
-Тон и словарь пользовательского UI — [docs/voice.md](docs/voice.md) (не второй vision в чате).
+Тон и словарь пользовательского UI — [docs/voice.md](docs/voice.md) (не второй vision в чате).  
+Контексты / владеет·не владеет / куда писать код — [docs/light-ddd.md](docs/light-ddd.md).
 
 ---
 
@@ -78,6 +110,9 @@
 - ❌ Полный Prism без нужды — см. `docs/workflow-weight.md`
 - ❌ Green волны 08 без evidence (`prism/evidence.md`)
 - ❌ Межцикл ArchitectureCheck / Latency / стой → не слой `0N` и не `B-*`
+- ❌ Раздувать этот файл changelog’ом / дампом Prism ID — хроника в `CHANGELOG.md` / summary
+- ❌ Expand «из туду» без GO, когда режим `FINISH, NOT EXPAND` / `AUDIT ONLY`
+- ❌ Полный DDD-каркас без боли — см. `docs/light-ddd.md`
 
 См. [agent-rules/antipatterns.md](agent-rules/antipatterns.md).
 

@@ -9,6 +9,10 @@
 - ❌ Shell / env / пути скриптов в пользовательском UI
 - ❌ Жаргон домена / ops на first screen без перевода (см. voice)
 - ❌ Flash «пусто» до fetch · пачка ачивок на пустом успехе · ведущие emoji в primary title (см. voice)
+- ❌ `AGENTS.md` как changelog / дамп Prism ID / хроника туду — OS для агента, не летопись
+- ❌ Expand «из списка несделанного» без GO владельца в режиме finish / audit-only
+- ❌ Полный DDD (Entity / Aggregate / CQRS packages) без боли — см. `docs/light-ddd.md`
+- ❌ Писать в соседние репо / общую БД с соседом без контракта + GO (`light-ddd` § изоляция)
 
 ## Код и API
 

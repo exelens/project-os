@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.9.0 — 2026-11-05
+
+- `scaffold/docs/light-ddd.md` — portable light DDD: contexts · dictionary · write isolation · invariants · optional integration phases; **not** Entity/CQRS
+- `scaffold/AGENTS.md` — режим `BUILD` | `FINISH, NOT EXPAND` | `AUDIT ONLY` · GO владельца · краткие «сделано / later» · запрет changelog-дампа в AGENTS
+- Antipatterns / conventions / Cursor rule / localize · new-repo · agent-workflow · stages · docs hub · kit README/QUICKSTART
+- Distilled from product Lab-finish practice (Taskdesk 2026-11); no product paths/copy
+
 ## 1.8.0 — 2026-10-09
 
 - `scaffold/tests/README.md` — suite bar from product practice: **Hypothesis** (pure logic, in fast CI) · **Schemathesis** (OpenAPI live fuzz, separate job) · targeted mutation · env wipe · coverage-as-map · suite map table

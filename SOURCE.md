@@ -4,6 +4,7 @@
 |------|----------|
 | Extracted from | Private product methodology (AGENTS · docs map · tests hygiene · Prism ritual) |
 | Extracted on | 2026-09-04 |
+| Last lift | 2026-11-05 (kit **1.9.0** — light-ddd · GO / finish-not-expand · short AGENTS) |
 | Intent | Domain-agnostic Project OS for future repos |
 | Not included | Product code, domain-specific docs, stack lock-in |
 | Voice pattern | Abstracted from product `docs/voice.md` practice (audience tiers · dictionary · bans · first-screen exemplar · FOUC · emoji · plural · lock test · Prism hand-off) — no product copy |
@@ -13,6 +14,8 @@
 | LatencyCheck | Inter-cycle latency triage distilled from product practice; not a Prism layer — `scaffold/prism/LatencyCheck.md`. Which critical GET/await blocks the user, with ms evidence |
 | ArchitectureCheck | Inter-cycle peel triage (god / smear / boundary) distilled from product practice; not a Prism layer — `scaffold/prism/ArchitectureCheck.md` |
 | Trust contours | Selective DDD for number honesty (grain · list≠detail · multi-source); domain/optional template — `scaffold/docs/trust-contours.md` + `scaffold/prism/prompts/OPTIONAL-trust-contours.md` (`T-*`). Not CQRS / full DDD packages |
+| Light DDD | Portable contexts / owns-doesn't-own / write isolation / invariants — distilled from product `docs/light-ddd.md` practice (2026-11); no neighbor product names in scaffold — `scaffold/docs/light-ddd.md` |
+| GO / finish mode | Lab-finish gate: owner GO > todo lists; modes BUILD · FINISH NOT EXPAND · AUDIT ONLY — distilled from product AGENTS practice; scaffold keeps TODO_ placeholders |
 | Compatibility shims | Thin `CLAUDE.md` / Copilot pointers — Agents Playbook pattern; canon stays `AGENTS.md` |
 | Workflow weight L0–L3 | Risk-tier idea adapted from portable agent-workflow kits; table is Project OS–specific |
 | Localize checklist | Post-apply fill ritual inspired by cursor-os localization; evidence-first, no invented stack |

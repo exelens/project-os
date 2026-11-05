@@ -41,13 +41,15 @@ cd /path/to/your-product-repo && rg 'TODO_' -n
 
 1. Канон в коде + коротких docs, не в чате.  
 2. Один SSOT на понятие (`docs/canon-owners.md`); тон UI — `docs/voice.md` (если есть витрина).  
-3. Тесты = контракт поведения; нет `assert True`.  
-4. Вес workflow L0–L3 (`docs/workflow-weight.md`) — не каждый запрос = Prism.  
-5. Prism: audit → merge → волны → verify с evidence; новый domain-слой — только ничейная зона (`prism/DOMAIN.md`).  
-6. Между циклами — **стой** [`prism/pisdetscheck.md`](./scaffold/prism/pisdetscheck.md). Секунды на GET — [`LatencyCheck`](./scaffold/prism/LatencyCheck.md). God/peel — [`ArchitectureCheck`](./scaffold/prism/ArchitectureCheck.md). Все не слои; scratch в корне. Цифры/зерно — [`docs/trust-contours.md`](./scaffold/docs/trust-contours.md) + optional `T-*`.  
-7. ACCEPTED — в `docs/accepted-debt.md`.  
-8. Агент не wipe’ает `reviews/`.  
-9. Один `AGENTS.md`; `CLAUDE.md` / Copilot instructions — thin pointers.
+3. Границы доменов — `docs/light-ddd.md` (владеет / не владеет / куда писать); не полный DDD.  
+4. Короткий `AGENTS.md` + режим `BUILD` | `FINISH, NOT EXPAND` | `AUDIT ONLY`; GO владельца > списки «не сделано».  
+5. Тесты = контракт поведения; нет `assert True`. Hypothesis / Schemathesis / mutation — по зрелости и боли, не day-0 must.  
+6. Вес workflow L0–L3 (`docs/workflow-weight.md`) — не каждый запрос = Prism.  
+7. Prism: audit → merge → волны → verify с evidence; новый domain-слой — только ничейная зона (`prism/DOMAIN.md`).  
+8. Между циклами — **стой** [`prism/pisdetscheck.md`](./scaffold/prism/pisdetscheck.md). Секунды на GET — [`LatencyCheck`](./scaffold/prism/LatencyCheck.md). God/peel — [`ArchitectureCheck`](./scaffold/prism/ArchitectureCheck.md). Все не слои; scratch в корне. Цифры/зерно — [`docs/trust-contours.md`](./scaffold/docs/trust-contours.md) + optional `T-*`.  
+9. ACCEPTED — в `docs/accepted-debt.md`.  
+10. Агент не wipe’ает `reviews/`.  
+11. Один `AGENTS.md`; `CLAUDE.md` / Copilot instructions — thin pointers. Не changelog в `AGENTS.md`.
 
 ---
 

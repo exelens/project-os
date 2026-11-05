@@ -3,9 +3,12 @@ description: Project OS — canon, tests, Prism, antipatterns
 alwaysApply: true
 ---
 
-Follow AGENTS.md and docs/canon-owners.md.
+Follow AGENTS.md, docs/canon-owners.md, and docs/light-ddd.md.
 
 - One SSOT per concept; no duplicate limits/labels without parity test.
+- Respect AGENTS mode: GO owner wins; FINISH/AUDIT → no expand from todo lists without GO.
+- Keep AGENTS.md short — not a changelog or Prism ID dump.
+- Light DDD: contexts / owns-doesn't-own / write isolation; no Entity/CQRS scaffolding by default.
 - Never return raw exception strings to clients.
 - No assert True / empty tests; prefer contract tests.
 - Test stack bar: Hypothesis (pure logic) in fast suite; Schemathesis (OpenAPI) separate job; mutation targeted — see tests/README.md.

@@ -14,16 +14,18 @@
 ## Порядок
 
 1. **Идентичность** — `AGENTS.md`: имя продукта, дата, remote, стек (1 строка).
-2. **Команды** — быстрый тест / полный suite / lint из реальных скриптов; иначе «пока нет» в stages. Заполни в `tests/README.md`: TODO_FAST · TODO_FE · TODO_SCHEMA (Schemathesis) · TODO_HYPOTHESIS · TODO_MUTATE — или Gap.
-3. **Контур** — `.env.example` имена; БД / очередь — да/нет по коду.
-4. **Canon seed** — 2–3 понятия в `docs/canon-owners.md` (даже TBD owner).
-5. **Этап** — `docs/stages.md` честный (Spike ≠ Open Beta).
-6. **Voice** — UI есть → заполни `docs/voice.md` (тиры аудиторий · словарь · баны · эталон first screen · FOUC/emoji если уместно); иначе «voice — later» в stages.
-7. **Trust contours** — мультизерно / list≠detail / 2+ источника в KPI → заполни `docs/trust-contours.md`; иначе «trust contours — later» в stages (не плоди пустой SSOT).
-8. **README продукта** — как поднять локально (не kit README).
-9. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.
-10. **Deploy** — если уже есть VPS/compose: заполни [deployment.md](../deployment.md) и [public-vps.md](public-vps.md); иначе «deploy — later» в stages. Не выдумывай хост/секреты.
-11. **Lint** — из корня продукта:  
+2. **Режим** — блок «Текущий режим»: `BUILD` | `FINISH, NOT EXPAND` | `AUDIT ONLY`; кратко «сделано / later / нужен GO». Не копируй летопись другого продукта.
+3. **Команды** — быстрый тест / полный suite / lint из реальных скриптов; иначе «пока нет» в stages. Заполни в `tests/README.md`: TODO_FAST · TODO_FE · TODO_SCHEMA (Schemathesis) · TODO_HYPOTHESIS · TODO_MUTATE — или Gap.
+4. **Контур** — `.env.example` имена; БД / очередь — да/нет по коду.
+5. **Canon seed** — 2–3 понятия в `docs/canon-owners.md` (даже TBD owner).
+6. **Light DDD** — заполни `docs/light-ddd.md` (контексты · словарь · куда писать). Нет соседей → сократи, не invent. Pipeline аналитики — только если он есть в коде.
+7. **Этап** — `docs/stages.md` честный (Spike ≠ Open Beta).
+8. **Voice** — UI есть → заполни `docs/voice.md` (тиры аудиторий · словарь · баны · эталон first screen · FOUC/emoji если уместно); иначе «voice — later» в stages.
+9. **Trust contours** — мультизерно / list≠detail / 2+ источника в KPI → заполни `docs/trust-contours.md`; иначе «trust contours — later» в stages (не плоди пустой SSOT).
+10. **README продукта** — как поднять локально (не kit README).
+11. **Вес** — глянь [workflow-weight.md](../workflow-weight.md): для Spike чаще L0.
+12. **Deploy** — если уже есть VPS/compose: заполни [deployment.md](../deployment.md) и [public-vps.md](public-vps.md); иначе «deploy — later» в stages. Не выдумывай хост/секреты.
+13. **Lint** — из корня продукта:  
    `path/to/project-os/scripts/lint_agents_md.sh AGENTS.md`  
    (или скопированный скрипт). Цель — exit 0 без `--allow-todo`.
 
@@ -36,5 +38,7 @@
 ## Не делать
 
 - Не копировать историю другого продукта
+- Не переносить чужой `AGENTS` changelog / Prism ID-дамп
 - Не invent product claims / метрики
 - Не запускать полный Prism на localize
+- Не объявлять `FINISH, NOT EXPAND`, если этап ещё Spike и цель — строить

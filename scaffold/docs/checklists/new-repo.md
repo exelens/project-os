@@ -30,6 +30,8 @@
 ## 3. Canon seed
 
 - [ ] 2–3 строки в canon-owners (даже TBD owner)
+- [ ] `docs/light-ddd.md` — хотя бы ядро «владеет / не владеет» + куда писать код
+- [ ] `AGENTS.md` режим: `BUILD` на Spike; не раздувать файл летописью
 - [ ] Этап в stages.md честный (Spike ≠ Open Beta)
 - [ ] UI/витрина есть → заполни `docs/voice.md` (тиры · словарь · баны · эталон first screen); иначе «voice — later» в stages
 

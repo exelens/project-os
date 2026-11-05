@@ -8,6 +8,7 @@
 | [stages.md](stages.md) | Этап продукта · открытый долг |
 | [workflow-weight.md](workflow-weight.md) | L0–L3: сколько церемонии (post-code → full Prism) |
 | [canon-owners.md](canon-owners.md) | SSOT: кто owner какого понятия |
+| [light-ddd.md](light-ddd.md) | Контексты · словарь · изоляция кода · инварианты (не CQRS) |
 | [voice.md](voice.md) | Тон и словарь UI (витрина / кабинет); optional без UI |
 | [trust-contours.md](trust-contours.md) | Контуры доверия к цифрам (selective DDD); optional без аналитики |
 | [accepted-debt.md](accepted-debt.md) | Осознанный долг (ACCEPTED), не баги ядра |
@@ -31,5 +32,7 @@
 1. Док = **короткий live runbook**, не второй учебник по фреймворку.
 2. Закрытая волна → одна строка + ссылка на код/тест; не раздувать историю в каждом файле.
 3. Числа/лейблы — только через [canon-owners.md](canon-owners.md).
-4. Тон / словарь пользовательского UI — [voice.md](voice.md) (не дублировать PRODUCT/vision).
-5. Идеи / планы агента: `docs/superpowers/plans/` или `docs/agent/` — не смешивать с live runbook.
+4. Границы доменов / куда писать — [light-ddd.md](light-ddd.md).
+5. Тон / словарь пользовательского UI — [voice.md](voice.md) (не дублировать PRODUCT/vision).
+6. Идеи / планы агента: `docs/superpowers/plans/` или `docs/agent/` — не смешивать с live runbook.
+7. Не превращать `AGENTS.md` в changelog — хроника в `CHANGELOG.md` / [prism-cycle-summary.md](prism-cycle-summary.md).

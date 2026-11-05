@@ -33,10 +33,11 @@ rg 'TODO_' -n
 
 | Файл | Что |
 |------|-----|
-| `AGENTS.md` | имя, стек, путь юзера, команды тестов |
+| `AGENTS.md` | имя, стек, путь юзера, команды тестов, режим BUILD/FINISH/AUDIT |
 | `docs/stages.md` | честный этап (Spike / …) |
 | `docs/workflow-weight.md` | ориентир L0–L3 (обычно не правят) |
 | `docs/canon-owners.md` | 2–3 реальных понятия |
+| `docs/light-ddd.md` | контексты · изоляция · инварианты (сократи, если нет соседей) |
 | `docs/voice.md` | тон UI: тиры · словарь · эталон first screen (если витрина; иначе «voice — later» в stages) |
 | `.env.example` | имена переменных без секретов |
 | `tests/README.md` | как запускать тесты (+ Hypothesis · Schemathesis · mutate) |
@@ -54,7 +55,7 @@ Shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`.
 
 ## 3. Smoke для агента
 
-> Прочитай `AGENTS.md` и `docs/canon-owners.md`. Где SSOT, как тестить, какой вес workflow (L0–L3), когда Prism?
+> Прочитай `AGENTS.md`, `docs/canon-owners.md` и `docs/light-ddd.md`. Где SSOT, какой режим (BUILD/FINISH), куда писать код, как тестить, какой вес workflow (L0–L3), когда Prism?
 
 Ок, если отвечает по файлам, а не «придумаем процесс».
 
@@ -70,6 +71,7 @@ Shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`.
 | Latency (межцикл) | `prism/LatencyCheck.md` — не слой; секунды на критическом GET |
 | Architecture (межцикл) | `prism/ArchitectureCheck.md` — не слой; god / smear / peel |
 | Trust contours | `docs/trust-contours.md` + `prism/prompts/OPTIONAL-trust-contours.md` (`T-*`) |
+| Лёгкий DDD | `docs/light-ddd.md` |
 | Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |
 | Тон / словарь UI | `docs/voice.md` |
 | Осознанный долг | `docs/accepted-debt.md` |
