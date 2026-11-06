@@ -61,10 +61,10 @@
 | Вес workflow (L0–L3) | [docs/workflow-weight.md](docs/workflow-weight.md) |
 | Лёгкий DDD (контексты) | [docs/light-ddd.md](docs/light-ddd.md) |
 | Prism | [prism/README.md](prism/README.md) · [prism/layers.md](prism/layers.md) |
-| Evidence волны (08) | [prism/evidence.md](prism/evidence.md) |
-| Стой (межцикл triage) | [prism/pisdetscheck.md](prism/pisdetscheck.md) — не слой; scratch в корне |
-| Latency (межцикл) | [prism/LatencyCheck.md](prism/LatencyCheck.md) — не слой; scratch `latencycheck.md` в корне |
-| Architecture (межцикл) | [prism/ArchitectureCheck.md](prism/ArchitectureCheck.md) — не слой; scratch `architecturecheck.md` в корне |
+| Evidence волны (08) | [prism/evidence.md](prism/evidence.md) — только `B-*` |
+| Стой / CrossCheck / Latency / Architecture | [prism/pisdetscheck.md](prism/pisdetscheck.md) · [CrossCheck](prism/CrossCheck.md) · [LatencyCheck](prism/LatencyCheck.md) · [ArchitectureCheck](prism/ArchitectureCheck.md) — не слои |
+| DeepScan (тяжёлый межцикл) | [prism/DeepScan.md](prism/DeepScan.md) — `DS-*`; не слой |
+| Dogfood (live pass) | [prism/dogfood.md](prism/dogfood.md) — → domain ID |
 | Canon-owners (SSOT) | [docs/canon-owners.md](docs/canon-owners.md) |
 | Голос UI (tone / словарь) | [docs/voice.md](docs/voice.md) — optional без витрины |
 | Контуры доверия к цифрам | [docs/trust-contours.md](docs/trust-contours.md) — optional без аналитики; Prism `T-*` |
@@ -109,7 +109,7 @@
 - ❌ Claim / copy без `docs/voice.md` (если UI есть) и без evidence
 - ❌ Полный Prism без нужды — см. `docs/workflow-weight.md`
 - ❌ Green волны 08 без evidence (`prism/evidence.md`)
-- ❌ Межцикл ArchitectureCheck / Latency / стой → не слой `0N` и не `B-*`
+- ❌ Межцикл (стой / CrossCheck / Latency / Architecture / DeepScan / dogfood) → не слой `0N` и не `B-*`
 - ❌ Раздувать этот файл changelog’ом / дампом Prism ID — хроника в `CHANGELOG.md` / summary
 - ❌ Expand «из туду» без GO, когда режим `FINISH, NOT EXPAND` / `AUDIT ONLY`
 - ❌ Полный DDD-каркас без боли — см. `docs/light-ddd.md`
@@ -152,7 +152,7 @@
 - Не вместо CI: зелёный пайплайн ≠ «можно безопасно менять всё»
 - Ритуал: [prism/README.md](prism/README.md)
 - Закрытие волны: [prism/evidence.md](prism/evidence.md) — без evidence нет green в 08
-- Межцикл L1: стой · LatencyCheck · ArchitectureCheck (не слои; не в одном чате)
+- Межцикл L1: стой · CrossCheck · Latency · Architecture · dogfood; тяжёлый — DeepScan (не слои; один на чат)
 - Цифры / зерно: [docs/trust-contours.md](docs/trust-contours.md) + optional `T-*`
 
 ---

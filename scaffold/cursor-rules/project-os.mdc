@@ -12,6 +12,7 @@ Follow AGENTS.md, docs/canon-owners.md, and docs/light-ddd.md.
 - Never return raw exception strings to clients.
 - No assert True / empty tests; prefer contract tests.
 - Test stack bar: Hypothesis (pure logic) in fast suite; Schemathesis (OpenAPI) separate job; mutation targeted — see tests/README.md.
+- Inter-cycle: one ritual per chat (стой/CrossCheck/Latency/Architecture/DeepScan/dogfood); 08 evidence = B-* only; DeepScan = DS-*.
 - Pick ceremony level from docs/workflow-weight.md (L0–L3); do not open reviews/ on L0.
 - Risk zones need an explicit invariant (see prism/layers.md).
 - Prism audit/merge/verify: do not change code; do not wipe reviews/.

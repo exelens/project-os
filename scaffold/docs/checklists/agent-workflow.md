@@ -17,7 +17,5 @@
 Если просят «аудит всего» — предложи уровень из workflow-weight (часто L2, не сразу L3), не один гигантский чат.  
 Закрытие волны Prism — только с evidence ([../../prism/evidence.md](../../prism/evidence.md)).
 
-Между циклами Prism / перед короткой FIX-волной — стой [prism/pisdetscheck.md](../../prism/pisdetscheck.md) (scratch в корне; не слой, не merge в `B-*`). Не путать с generic «senior audit + улучши промпт».
-Экран или GET висит секундами — [prism/LatencyCheck.md](../../prism/LatencyCheck.md) (`L-*` в `latencycheck.md`). Отдельный чат, не вместе со стой.
-God / smear / peel — [prism/ArchitectureCheck.md](../../prism/ArchitectureCheck.md) (`AC-*`). Отдельный чат, не вместе с CrossCheck / Latency / стой.
+Между циклами Prism — **один** межцикл на чат (не merge в `B-*`): стой · CrossCheck (`D-*`) · Latency · Architecture · dogfood · тяжёлый [DeepScan](../../prism/DeepScan.md) (`DS-*`). Не generic «senior audit + улучши промпт».
 Путаница зерна / list≠detail / источников в KPI — [docs/trust-contours.md](../trust-contours.md) + [OPTIONAL-trust-contours](../../prism/prompts/OPTIONAL-trust-contours.md) (`T-*`).

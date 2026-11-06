@@ -13,9 +13,12 @@
 | [../docs/voice.md](../docs/voice.md) | Тон / словарь UI (если витрина); слои 05 и domain сверяют сюда |
 | `prompts/0N-*.md` | Роль слоя — в чат как `@prism/prompts/0N-…` |
 | [evidence.md](./evidence.md) | Evidence волны для **08** (без строки — нет green) |
-| [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (не слой; не в 07) |
-| [LatencyCheck.md](./LatencyCheck.md) | Медленные критические пути (не слой; не в 07); scratch `latencycheck.md` |
-| [ArchitectureCheck.md](./ArchitectureCheck.md) | God / smear / peel (не слой; не в 07); scratch `architecturecheck.md` |
+| [pisdetscheck.md](./pisdetscheck.md) | **Стой** — межцикловый triage (`PC-*`; не слой) |
+| [CrossCheck.md](./CrossCheck.md) | Дубли / противоречия логики (`D-*`; не слой) |
+| [LatencyCheck.md](./LatencyCheck.md) | Медленные критические пути (`L-*`/`LC-*`; не слой) |
+| [ArchitectureCheck.md](./ArchitectureCheck.md) | God / smear / peel (`AC-*`; не слой) |
+| [DeepScan.md](./DeepScan.md) | Сквозная целостность (`DS-*`; тяжёлый межцикл; не слой) |
+| [dogfood.md](./dogfood.md) | Live pass аудиторией → domain ID (не слой) |
 | [prompts/OPTIONAL-trust-contours.md](./prompts/OPTIONAL-trust-contours.md) | Контуры доверия к цифрам (`T-*`); канон [../docs/trust-contours.md](../docs/trust-contours.md) |
 | [../docs/workflow-weight.md](../docs/workflow-weight.md) | Когда L2/L3 vs post-code / стой |
 | [../docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md) | Сводка последнего цикла |
@@ -52,28 +55,26 @@
 | 09+ | домен | свой канон | `reviews/0N-….md` |
 | опц. | audit | IDOR / security / infra | свои префиксы |
 
-Новый домен: [DOMAIN.md](./DOMAIN.md) — **только ничейная зона**; не дублировать 03/04 «слоем механизмов». Шаблон промпта включает voice · Acceptance · Smoke.
+Новый домен: [DOMAIN.md](./DOMAIN.md) — **только ничейная зона**; не дублировать 03/04 «слоем механизмов». Шаблон: voice · Acceptance Q · Smoke · optional [dogfood](./dogfood.md).
 
-Ложные дубли между слоями — [layers.md](./layers.md) § Горячие швы. Поверхность без своего слоя (orphan) — чеклист внутри существующего + Hand-off; таблицу orphan заведи в этом README продукта при появлении.
+Ложные дубли — [layers.md](./layers.md) § Горячие швы. Orphan-поверхность — чеклист внутри существующего + Hand-off; таблицу orphan заведи здесь при появлении.
 
-### Стой (не слой)
+### Межцикл (не слои)
 
-Между закрытыми циклами Prism, перед короткой FIX-волной: [pisdetscheck.md](./pisdetscheck.md).  
-Пишет scratch в корне продукта (`pisdetscheck.md` или `pi.md`), ID **`PC-*`**. **Не** номер слоя, **не** `reviews/0N`, **не** merge в `B-*`. Не заменяет 01–08 и не идёт после «только что закрытого» цикла ради третьей сети. Generic «senior audit + улучши промпт» в kit **не** входит.
+Один ритуал = один чат. Не после только что закрытого цикла «ради третьей сети». Карта ID — [layers.md](./layers.md) § Префиксы · § Gaps.
 
-### LatencyCheck (не слой)
-
-Когда критический путь висит секунды: [LatencyCheck.md](./LatencyCheck.md).  
-Scratch в корне (`latencycheck.md` или `lc.md`), находки `L-*` (или **`LC-*`**, если `L` занят доменом). **Не** слой, **не** `B-*`. Не замена **03** и не стой: вопрос только «какой await заставляет ждать и почему не кэш/фон». Отдельный чат FIX.
-
-### ArchitectureCheck (не слой)
-
-Когда код раздулся / перед peel: [ArchitectureCheck.md](./ArchitectureCheck.md).  
-Scratch в корне (`architecturecheck.md` или `ac.md`), находки `AC-*`. **Не** слой, **не** `B-*`. Не замена **03** (local smell) и не **04** (SSOT без LOC-таблицы). Отдельный чат FIX. Не вместе с CrossCheck / Latency / стой.
+| Ритуал | Когда | ID |
+|--------|-------|-----|
+| [pisdetscheck](./pisdetscheck.md) | смешанная боль dogfood | `PC-*` |
+| [CrossCheck](./CrossCheck.md) | дубли / противоречия логики | `D-*` |
+| [LatencyCheck](./LatencyCheck.md) | GET/await секунды+ | `L-*` / `LC-*` |
+| [ArchitectureCheck](./ArchitectureCheck.md) | god / smear / peel | `AC-*` |
+| [DeepScan](./DeepScan.md) | сквозная целостность (дорого; до 5 потоков) | `DS-*` |
+| [dogfood](./dogfood.md) | live pass аудиторией → domain | domain / `DF-*` |
 
 ### Trust contours (optional / domain)
 
-Когда несколько зёрен, list≠detail или 2+ источника в одной цифре: заполнить [../docs/trust-contours.md](../docs/trust-contours.md), затем `@prism/prompts/OPTIONAL-trust-contours.md`. ID `T-*` в `reviews/`. Номер слоя — по [DOMAIN.md](./DOMAIN.md), не обязательно «23».
+Несколько зёрен / list≠detail / 2+ источника: [../docs/trust-contours.md](../docs/trust-contours.md) + `@prism/prompts/OPTIONAL-trust-contours.md`. ID `T-*`.
 
 ---
 
@@ -82,12 +83,10 @@ Scratch в корне (`architecturecheck.md` или `ac.md`), находки `A
 1. Пустой `reviews/`.
 2. Параллельные аудиты по [layers.md](./layers.md).
 3. Partial **07** при наличии **02** (+ желательно **01**).
-4. Wave fixes → **08** со scope = Wave K + таблица evidence ([evidence.md](./evidence.md)).
-5. Domains/optional — свои ID; verify в том же чате.
+4. Wave fixes → **08** со scope = Wave K + evidence **только `B-*`** ([evidence.md](./evidence.md)).
+5. Domains/optional — свои ID; verify в том же чате (не таблица 08).
 6. Close по формуле в `layers.md`; агент не удаляет `reviews/`.
-7. Между циклами (по боли) — стой `@prism/pisdetscheck.md` → отдельный FIX по Disposition.
-8. Экран или GET висит секундами — `@prism/LatencyCheck.md` → отдельный FIX. Не в том же чате, что стой или **03**.
-9. God / smear / peel — `@prism/ArchitectureCheck.md` → отдельный FIX. Не вместе с другими межциклами.
-10. Путаница зерна/источников — канон trust-contours + optional prompt (`T-*`).
+7. Между циклами — один межцикл из таблицы выше → отдельный FIX.
+8. Путаница зерна — trust-contours (`T-*`).
 
 Не уверен, нужен ли полный цикл? → [../docs/workflow-weight.md](../docs/workflow-weight.md).

@@ -123,8 +123,11 @@ green цикла только когда:
 | `S-*` / `X-*` / `I-*` | optional security / surface / infra | score/queue product features |
 | `T-*` | trust contours (optional/domain) | tools / tickets, если займёшь другую букву |
 | `L-*` | **LatencyCheck** (scratch в корне) | blog / Lighthouse — если домен блога нужен, бери другую букву **или** переименуй latency в `LC-*` |
+| `D-*` | **CrossCheck** (scratch в корне) | не `DS-*` DeepScan; не docs DocClean |
+| `DS-*` | **DeepScan** (scratch в корне) | не `D-*` CrossCheck |
 | `AC-*` | ArchitectureCheck | не `A-*` admin без явной договорённости |
 | `PC-*` / стой | pisdetscheck (рекомендуемый префикс в scratch) | crawl/parser domain `P-*`, если заведён |
+| `DF-*` | dogfood findings (опц. в `reviews/dogfood-…`) | предпочтителен Hand-off в domain-префикс |
 
 Перед новым префиксом: `rg` по `prism/` и `docs/prism-cycle-summary.md`. Одна буква — одна роль в репо.
 
@@ -185,7 +188,23 @@ green цикла только когда:
 - **02** cookie/shape ≠ «user A читает ресурс B».  
 - **03** «security smell» ≠ полный IDOR.
 
-**Orphan-поверхности** (нет своего слоя) — чеклист внутри существующего слоя + Hand-off; новый 09+ только по gate [DOMAIN.md](./DOMAIN.md). Заведи таблицу в `prism/README.md` продукта: поверхность | кто смотрит | не путать с.
+**Два authz-plane** (если есть)  
+- Tenant membership / object owner → optional IDOR + owner-domain.  
+- Ops allowlist / admin desk → admin-domain + security-surface.  
+Не требовать один и тот же ACL-язык на обоих.
+
+**Brand / palette / hex tokens ≠ Prism-слой**  
+- Токены и lock-тест chrome → L0 + product design SSOT.  
+- Hydrated mark drift → **05**; favicon / SSR head assets → **06**.
+
+**Honesty-domain не по умолчанию**  
+- Claim/copy drift → сначала [docs/voice.md](../docs/voice.md) + **05**/**06**.  
+- Отдельный `H-*` / honesty-слой — только при устойчивом drift ≥2 циклов ([DOMAIN.md](./DOMAIN.md) gate).
+
+**Нет подсистемы → не требуй ритуал**  
+- Нет очереди / billing / workers в продукте — не открывай findings «как будто есть» и не заводи optional infra «на будущее» без evidence боли.
+
+**Orphan-поверхности** (нет своего слоя) — чеклист внутри существующего слоя + Hand-off; новый 09+ только по gate [DOMAIN.md](./DOMAIN.md). Заведи таблицу в `prism/README.md` продукта: поверхность | кто смотрит | не путать с. Новый номер домена — если нужен **отдельный** префикс ID и это повторится в ≥2 циклах.
 
 ---
 
@@ -228,11 +247,20 @@ Runtime ops, одноразовые миграции данных, ручной 
 
 Schemathesis / полный mutation / browser e2e как **merge-gate** — политика продукта (`tests/README.md`), не слой Prism; отсутствие команды/канона при зрелом API — finding слоя **01**, не silent green.
 
-**Стой (pisdetscheck)** — межцикловый triage вне нумерации слоёв: [pisdetscheck.md](./pisdetscheck.md). Не Gap и не слой 09+: не пишет в `reviews/`, не мержится в `B-*`, не reopen закрытых ID без новой evidence.
+**Межцикл (не слои; один ритуал = один чат; не после close «ради третьей сети»):**
 
-**LatencyCheck** — те же правила для хвостов «экран ждёт секунды»: [LatencyCheck.md](./LatencyCheck.md). `L-*` (или `LC-*` при коллизии) только в корневом scratch, не в `reviews/`.
+| Ритуал | ID | Scratch | Вопрос |
+|--------|-----|---------|--------|
+| [pisdetscheck](./pisdetscheck.md) стой | `PC-*` | корень | смешанная dogfood-боль |
+| [CrossCheck](./CrossCheck.md) | `D-*` | корень | дубли / противоречия логики |
+| [LatencyCheck](./LatencyCheck.md) | `L-*`/`LC-*` | корень | GET секунды+ |
+| [ArchitectureCheck](./ArchitectureCheck.md) | `AC-*` | корень | god / smear / peel |
+| [DeepScan](./DeepScan.md) | `DS-*` | корень | сквозная целостность (дорого) |
+| [dogfood](./dogfood.md) | domain / `DF-*` | `reviews/dogfood-…` | live pass аудиторией → domain |
 
-**ArchitectureCheck** — god / smear / peel-границы: [ArchitectureCheck.md](./ArchitectureCheck.md). `AC-*` в корневом scratch. Не **03** (local smell) и не **04** (назначить SSOT без таблицы LOC/fan-in).
+Не пишут в `B-*` через **07**. Не reopen закрытых ID без новой evidence. Evidence домов — [evidence.md](./evidence.md).
 
 **03 local perf ≠ LatencyCheck** — OOM/N+1-shape в файле → **03**; GET секунды+ / sync-on-GET → LatencyCheck (не `B-*`).  
-**03/04 ≠ ArchitectureCheck** — local smell без fan-in → **03**; owner без LOC-таблицы → **04**; таблица god/smear/peel → ArchitectureCheck (не `B-*`).
+**03/04 ≠ ArchitectureCheck** — local smell без fan-in → **03**; owner без LOC-таблицы → **04**; таблица god/smear/peel → ArchitectureCheck (не `B-*`).  
+**04 ≠ CrossCheck** — SSOT owner в цикле Prism → **04**; межцикловый dup без `B-*` → CrossCheck.  
+**DeepScan ≠ CrossCheck/Architecture** — узкий dup → CrossCheck; peel LOC → Architecture; сквозной инвариант с proof → DeepScan.

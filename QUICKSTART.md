@@ -67,9 +67,9 @@ Shims: `CLAUDE.md`, `.github/copilot-instructions.md` → `AGENTS.md`.
 | Localize TODO_ | `docs/checklists/localize.md` |
 | Prism | `prism/README.md` |
 | Evidence волны | `prism/evidence.md` |
-| Стой (межцикл triage) | `prism/pisdetscheck.md` — не слой |
-| Latency (межцикл) | `prism/LatencyCheck.md` — не слой; секунды на критическом GET |
-| Architecture (межцикл) | `prism/ArchitectureCheck.md` — не слой; god / smear / peel |
+| Стой / CrossCheck / Latency / Architecture | `prism/pisdetscheck.md` · `CrossCheck.md` · `LatencyCheck.md` · `ArchitectureCheck.md` |
+| DeepScan | `prism/DeepScan.md` — сквозная целостность (`DS-*`) |
+| Dogfood | `prism/dogfood.md` — live pass → domain |
 | Trust contours | `docs/trust-contours.md` + `prism/prompts/OPTIONAL-trust-contours.md` (`T-*`) |
 | Лёгкий DDD | `docs/light-ddd.md` |
 | Новый домен продукта | `prism/DOMAIN.md` (только ничейная зона — не дубль 03/04) |

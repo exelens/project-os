@@ -7,9 +7,9 @@
 | Уровень | Когда | Что делать | Чего не делать |
 |---------|--------|------------|----------------|
 | **L0 — post-code** | Мелкая правка, известный контур, есть тест рядом | Post-code loop из `AGENTS.md` (тесты → docs → тесты) | Не открывать `reviews/`, не звать 01–08 |
-| **L1 — стой** | Между закрытыми Prism-циклами; короткая FIX-волна; «что-то болит», но не релиз | [`../prism/pisdetscheck.md`](../prism/pisdetscheck.md) → Disposition → точечный FIX. Секунды на GET: [`../prism/LatencyCheck.md`](../prism/LatencyCheck.md). God/peel: [`../prism/ArchitectureCheck.md`](../prism/ArchitectureCheck.md) | Не merge в `B-*`; не новый полный цикл «ради третьей сети»; не мешать стой / Latency / Architecture / CrossCheck в одном чате |
-| **L2 — light Prism** | Смена контракта в одном слое; серая зона в 1–2 областях | 1–2 audit-слоя + partial 07 + wave + **08 с evidence** | Не гонять все 01–06 «на всякий случай» |
-| **L3 — full Prism** | Крупный релиз, смена публичного контракта, много серых мест, недоверие к CI | Полный цикл [`../prism/README.md`](../prism/README.md) | Не заменять зелёным CI; не wipe `reviews/` агентом |
+| **L1 — межцикл** | Между закрытыми Prism-циклами; короткая FIX-волна; «что-то болит», но не релиз | Один ритуал: [стой](../prism/pisdetscheck.md) · [CrossCheck](../prism/CrossCheck.md) · [Latency](../prism/LatencyCheck.md) · [Architecture](../prism/ArchitectureCheck.md) · [dogfood](../prism/dogfood.md). Тяжёлый сквозной: [DeepScan](../prism/DeepScan.md) (обычно ближе к L2 по стоимости) | Не merge в `B-*`; не «третья сеть» после close; **один** межцикл на чат |
+| **L2 — light Prism** | Смена контракта в одном слое; серая зона в 1–2 областях | 1–2 audit-слоя + partial 07 + wave + **08 с evidence (`B-*` only)** | Не гонять все 01–06 «на всякий случай»; не DeepScan вместо 02 |
+| **L3 — full Prism** | Крупный релиз, смена публичного контракта, много серых мест, недоверие к CI | Полный цикл [`../prism/README.md`](../prism/README.md); DeepScan — опционально **после** или **между** циклами, не вместо 01–08 | Не заменять зелёным CI; не wipe `reviews/` агентом |
 
 ## Быстрый score (0–8)
 

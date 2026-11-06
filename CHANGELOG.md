@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.10.0 — 2026-11-06
+
+- `scaffold/prism/DeepScan.md` — тяжёлый межцикл сквозной целостности (`DS-*`, AUDIT_ONLY, до 5 потоков, adversarial proof)
+- `scaffold/prism/dogfood.md` — portable live pass → domain Hand-off
+- CrossCheck first-class (`D-*`) · evidence.md только `B-*` + homes domain/межцикл
+- Hand-off **03**→Latency/Architecture · **04**→CrossCheck/Architecture
+- Hot seams: dual authz · palette≠layer · honesty default-off · absent-subsystem honesty
+- Wired: README · layers · DOMAIN · workflow-weight · AGENTS · docs hub · antipatterns · QUICKSTART · `SOURCE.md`
+
 ## 1.9.0 — 2026-11-05
 
 - `scaffold/docs/light-ddd.md` — portable light DDD: contexts · dictionary · write isolation · invariants · optional integration phases; **not** Entity/CQRS

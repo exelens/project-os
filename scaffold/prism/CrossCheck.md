@@ -1,12 +1,15 @@
 # CrossCheck — Анти-дубли и логические рассинхроны
 
-Не слой Prism. Нет номера `0N`, нет префикса ID, нет `reviews/NN-…`. Это не код-ревью, это поиск аномалий в структуре и логике.
+**Не слой Prism.** Нет номера `0N`, нет `reviews/NN-…`, не идёт в **07** merge.
 
-**Когда:** перед крупным Feature или рефактором модуля; когда «код раздулся» или старые паттерны мешают новым.
+Межцикловый ритуал рядом со [стой](./pisdetscheck.md), [LatencyCheck](./LatencyCheck.md), [ArchitectureCheck](./ArchitectureCheck.md), [DeepScan](./DeepScan.md). Это не code review — поиск аномалий в структуре и логике.
 
-**Не когда:** вместо полного Prism (01–08); не для опечаток; не для «лучших практик» без боли; не вместе с LatencyCheck / ArchitectureCheck / pisdetscheck в одном чате.
+**Когда:** перед крупным Feature или рефактором модуля; когда «код раздулся» или старые паттерны мешают новым.  
+**Не когда:** вместо полного Prism (01–08); не для опечаток; не для «лучших практик» без боли; не в одном чате с Latency / Architecture / стой / DeepScan / dogfood.
 
-**Артефакт:** `crosscheck.md` (или `cc.md`) в корне — **scratch**. После FIX wipe (как `reviews/`); close — строка в [docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md). Residual → [docs/accepted-debt.md](../docs/accepted-debt.md).
+**Артефакт:** `crosscheck.md` (или `cc.md`) в корне — **scratch**. После FIX wipe; close — строка в [docs/prism-cycle-summary.md](../docs/prism-cycle-summary.md). Residual → [docs/accepted-debt.md](../docs/accepted-debt.md).
+
+**ID:** **`D-*`** в scratch (не `DS-*` DeepScan, не `B-*`). Зафиксируй в `layers.md` § Префиксы.
 
 **В чат:** `@prism/CrossCheck.md`. После аудита — отдельный чат FIX по Disposition. На audit код не менять.
 

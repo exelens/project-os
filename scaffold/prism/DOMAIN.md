@@ -28,8 +28,11 @@
 | God LOC/fan-in · smear-таблица · peel | **не слой** — [ArchitectureCheck.md](./ArchitectureCheck.md) |
 | Межцикловый triage / «стой» / pi.md | **не слой** — [pisdetscheck.md](./pisdetscheck.md) |
 | Медленные GET / latency-хвосты | **не слой** — [LatencyCheck.md](./LatencyCheck.md) |
+| Сквозная «всё зелёное, система врёт» | **не слой** — [DeepScan.md](./DeepScan.md) (`DS-*`) |
+| Live pass аудиторией | **не слой** — [dogfood.md](./dogfood.md) → Hand-off в domain |
 | Путаница зерна / list≠detail / 2+ источника в KPI | optional/domain — [prompts/OPTIONAL-trust-contours.md](./prompts/OPTIONAL-trust-contours.md) + [../docs/trust-contours.md](../docs/trust-contours.md); **не** «слой механизмов» |
 | Тон / словарь UI без своей поверхности | [docs/voice.md](../docs/voice.md) + **05** / existing domain; не слой «voice» |
+| Marketing honesty «на всякий случай» | voice + **05**/**06** сначала; `H-*` только при drift ≥2 циклов |
 | Generic senior-audit + «улучши промпт» | **не брать** в kit / не плодить слой |
 
 Durable карта механизмов (M*/H*) — **док продукта**, не слой Prism. После цикла findings → статус в доке; промпт Prism не дублирует карту.
@@ -46,6 +49,7 @@ Durable карта механизмов (M*/H*) — **док продукта**,
 4. Укажи SSOT-док: `docs/{{domain}}.md`.
 5. Артефакт цикла: `reviews/TODO_NN-{{slug}}.md`.
 6. Verify — domain-style в том же чате (не через слой 08).
+7. Опционально: companion [dogfood.md](./dogfood.md) с Acceptance Q той же поверхности.
 
 ## Шаблон промпта
 

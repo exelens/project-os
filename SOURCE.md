@@ -4,12 +4,15 @@
 |------|----------|
 | Extracted from | Private product methodology (AGENTS · docs map · tests hygiene · Prism ritual) |
 | Extracted on | 2026-09-04 |
-| Last lift | 2026-11-05 (kit **1.9.0** — light-ddd · GO / finish-not-expand · short AGENTS) |
+| Last lift | 2026-11-06 (kit **1.10.0** — DeepScan · dogfood · CrossCheck `D-*` · evidence B-only) |
 | Intent | Domain-agnostic Project OS for future repos |
 | Not included | Product code, domain-specific docs, stack lock-in |
 | Voice pattern | Abstracted from product `docs/voice.md` practice (audience tiers · dictionary · bans · first-screen exemplar · FOUC · emoji · plural · lock test · Prism hand-off) — no product copy |
 | Prism | Original know-how by Aleksej Lazutin (@exelens) — not derived from a third-party audit framework |
 | Hot seams | Portable anti-overlap templates distilled from product `про слои.md` § Горячие швы (multi-surface · map≠display · chrome≠DoD · funnel≠surface · our HTML≠ingest · money display≠payment) — no product paths |
+| DeepScan | Inter-cycle adversarial integrity audit distilled from product `prism/DeepScan.md` (`DS-*`, CONFIRMED/PROBABLE, max 5 flows, AUDIT_ONLY) — no product modules |
+| Dogfood ritual | Live audience pass → domain Hand-off; abstracted from Taskdesk `dogfood-cabinet.md` — no Lab URLs/passwords |
+| Evidence homes | B-wave-only 08 table + domain/межцикл homes — Taskdesk `evidence.md` practice |
 | Pisdetscheck (стой) | Inter-cycle triage pattern distilled from product practice (`pi.md`); not a Prism layer — `scaffold/prism/pisdetscheck.md` |
 | LatencyCheck | Inter-cycle latency triage distilled from product practice; not a Prism layer — `scaffold/prism/LatencyCheck.md`. Which critical GET/await blocks the user, with ms evidence |
 | ArchitectureCheck | Inter-cycle peel triage (god / smear / boundary) distilled from product practice; not a Prism layer — `scaffold/prism/ArchitectureCheck.md` |

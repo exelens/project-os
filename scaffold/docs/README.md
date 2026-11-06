@@ -15,9 +15,12 @@
 | [prism-cycle-summary.md](prism-cycle-summary.md) | Сводка последнего закрытого Prism-цикла |
 | [../prism/README.md](../prism/README.md) | Ритуал Prism |
 | [../prism/evidence.md](../prism/evidence.md) | Evidence волны для 08 |
-| [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой: межцикловый triage (не слой) |
-| [../prism/LatencyCheck.md](../prism/LatencyCheck.md) | LatencyCheck: секунды на критическом пути (не слой) |
-| [../prism/ArchitectureCheck.md](../prism/ArchitectureCheck.md) | ArchitectureCheck: god / smear / peel (не слой) |
+| [../prism/pisdetscheck.md](../prism/pisdetscheck.md) | Стой (`PC-*`; не слой) |
+| [../prism/CrossCheck.md](../prism/CrossCheck.md) | CrossCheck (`D-*`; не слой) |
+| [../prism/LatencyCheck.md](../prism/LatencyCheck.md) | LatencyCheck (`L-*`; не слой) |
+| [../prism/ArchitectureCheck.md](../prism/ArchitectureCheck.md) | ArchitectureCheck (`AC-*`; не слой) |
+| [../prism/DeepScan.md](../prism/DeepScan.md) | DeepScan (`DS-*`; тяжёлый межцикл) |
+| [../prism/dogfood.md](../prism/dogfood.md) | Dogfood live pass → domain |
 | [deployment.md](deployment.md) | Public / ops runbook (заполнить при деплое) |
 | [checklists/localize.md](checklists/localize.md) | После apply: заполнить TODO_ |
 | [checklists/agent-workflow.md](checklists/agent-workflow.md) | Агент в существующем репо |

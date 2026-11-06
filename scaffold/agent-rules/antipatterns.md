@@ -41,7 +41,9 @@
 - ❌ Писать код на слое audit / merge / verify
 - ❌ Мешать `B-*` и domain/optional ID в одном backlog
 - ❌ Новый domain-слой без ничейной зоны (дубль 03/04/«механизмы») — см. `prism/DOMAIN.md`
-- ❌ Делать из межциклового triage слой Prism (`pisdetscheck` / `LatencyCheck` / `ArchitectureCheck` / их scratch → не `0N`, не `reviews/`, не `B-*`)
+- ❌ Делать из межцикла слой Prism (`pisdetscheck` / CrossCheck / Latency / Architecture / DeepScan / dogfood → не `0N`, не `B-*`)
+- ❌ Domain / `D-*` / `DS-*` в таблице evidence волны **08** (только `B-*`)
+- ❌ Несколько межциклов в одном чате · DeepScan вместо 01–08
 - ❌ CQRS / `domain/` packages / «сумма daily = месяц» вместо заполненных trust contours (`docs/trust-contours.md`)
 - ❌ Объявить цикл green при незапущенном слое как будто он пройден
 - ❌ Агент удаляет `reviews/` после close
